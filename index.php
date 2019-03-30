@@ -24,7 +24,7 @@
 				<div class="card-body">
 					<h4 class="card-title"><i class="fa fa-paper-plane" aria-hidden="true"></i> SMTP Test</h4>
 					<p class="card-text">Test your connection to Sendgrid, Mailgun, Amazon SES, or any other SMTP server. See the exact SMTP "conversation" to help you troubleshoot email issues.</p>
-					<a href="/smtp" class="btn btn-outline-secondary">Test SMTP</a>
+					<a href="/smtp/" class="btn btn-outline-secondary">Test SMTP</a>
 				</div>
 			</div>
 		</div>
@@ -35,7 +35,7 @@
 				<div class="card-body">
 					<h4 class="card-title"><i class="fa fa-globe" aria-hidden="true"></i> DNS Lookup</h4>
 					<p class="card-text">Look up DNS records on any domain and monitor changes to records.</p>
-					<a href="/dns" class="btn btn-outline-secondary">Look up DNS</a>
+					<a href="/dns/" class="btn btn-outline-secondary">Look up DNS</a>
 				</div>
 			</div>
 		</div>
@@ -46,7 +46,7 @@
 				<div class="card-body">
 					<h4 class="card-title"><i class="fa fa-paint-brush" aria-hidden="true"></i> Color Converter</h4>
 					<p class="card-text">Convert any color code to a number of different formats among which are HEX, RGB, HSV, HSL and CMYK</p>
-					<a href="/color-converter" class="btn btn-outline-secondary">Convert colors</a>
+					<a href="/color-converter/" class="btn btn-outline-secondary">Convert colors</a>
 				</div>
 			</div>
 		</div>
@@ -57,7 +57,7 @@
 				<div class="card-body">
 					<h4 class="card-title"><i class="fa fa-picture-o" aria-hidden="true"></i> Image Compression</h4>
 					<p class="card-text">Make your images ready for the internet by compressing them by up to 90%, all without loosing quality</p>
-					<a href="/image-compression" class="btn btn-outline-secondary">Compress image</a>
+					<a href="/image-compression/" class="btn btn-outline-secondary">Compress image</a>
 				</div>
 			</div>
 		</div>
@@ -68,7 +68,7 @@
 				<div class="card-body">
 					<h4 class="card-title"><i class="fa fa-compress" aria-hidden="true"></i> IP Lookup</h4>
 					<p class="card-text">Check your public IP, location, ISP and more.</p>
-					<a href="/ip" class="btn btn-outline-secondary">Look up IP</a>
+					<a href="/ip/" class="btn btn-outline-secondary">Look up IP</a>
 				</div>
 			</div>
 		</div>
@@ -79,7 +79,18 @@
                 <div class="card-body">
                     <h4 class="card-title"><i class="fa fa-crosshairs" aria-hidden="true"></i> HTTP Headers</h4>
                     <p class="card-text">Check HTTP Headers from URL</p>
-                    <a href="/http-headers" class="btn btn-outline-secondary">Get Headers</a>
+                    <a href="/http-headers/" class="btn btn-outline-secondary">Get Headers</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card border-dark">
+                <div class="card-header"><span class="badge badge-success">networking</span></div>
+                <div class="card-body">
+                    <h4 class="card-title"><i class="fa fa-globe" aria-hidden="true"></i> Whois</h4>
+                    <p class="card-text">Check domain availability and contact information with a simply whois lookup</p>
+                    <a href="/whois/" class="btn btn-outline-secondary">Whois Lookup</a>
                 </div>
             </div>
         </div>

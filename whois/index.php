@@ -6,19 +6,19 @@
 <?php include('../_inc/navigation.php'); ?>
 
   	<div class="container">
-  		<h1>HTTP Headers</h1><br>
+  		<h1>Whois Lookup</h1><br>
 
-		<form id="headersTest" action="getheaders.php" method="post" accept-charset="utf-8">
+		<form id="whoisTest" action="whoislookup.php" method="post" accept-charset="utf-8">
 	  		<div class="row">
 
 				<div class="col-6 col-md-8">
 					<div class="form-group">
-						<input type="text" name="domainName" id="domainName" class="form-control my-1" placeholder="https://example.com" required>
+						<input type="text" name="domainName" id="domainName" class="form-control my-1" placeholder="example.com" required>
 					</div>
 			    </div>
 
 			    <div class="col-6 col-md-4">
-					<button id="buttonSubmit" type="submit" class="btn btn-success btn-block">Look Up Headers</button>
+					<button id="buttonSubmit" type="submit" class="btn btn-success btn-block">Check domain availability</button>
 
 					<button id="buttonLoad" class="btn btn-success btn-block" type="button" style="display:none;margin-top:0.25rem;" disabled>
 						<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
@@ -30,7 +30,12 @@
 		<br>
 		<div class="row">
 			<div class="col">
-				<div id="output"></div>
+                <div id="output-wrapper">
+                    <span class="circle c-1"></span>
+                    <span class="circle c-2"></span>
+                    <span class="circle c-3"></span>
+                    <pre><code class="Properties" id="output"></code></pre>
+                </div>
 			</div>
 		</div>
 
@@ -47,12 +52,14 @@
                 setTimeout(function(){
                     $.ajax({
                         type: 'post',
-                        url: 'getheaders.php',
-                        data: $('#headersTest').serialize(),
+                        url: 'whoislookup.php',
+                        data: $('#whoisTest').serialize(),
                         success: function(response) {
                             $('#buttonLoad').hide();
                             $('#buttonSubmit').show();
+                            $('#output-wrapper').addClass('active');
                             $('#output').html(response);
+                            hljs.initHighlighting();
                         }
                     });
                 }, 1000);

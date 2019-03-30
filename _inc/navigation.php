@@ -19,6 +19,7 @@
             <a class="dropdown-item" href="../ip/">IP Lookup</a>
             <a class="dropdown-item" href="../smtp/">SMTP Test</a>
             <a class="dropdown-item" href="../http-headers/">HTTP Headers</a>
+            <a class="dropdown-item" href="../whois/">Whois Lookup</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="../color-converter/">Color Converter</a>
             <a class="dropdown-item" href="../image-compression/">Image Compression</a>
