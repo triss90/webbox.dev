@@ -22,8 +22,8 @@
 
 				<form action="compress.php" id="dropzone" class="dropzone" method="POST" enctype="multipart/form-data"></form>
 
-				<div class="progress" id="progress" style="display: none;">
-				  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar-danger bg-danger" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+				<div class="progress" id="progress" style="display: none; height: 30px; padding: 3px;">
+				  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar-danger bg-danger" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%; font-size: 1rem;">
 				  	<span class="progress-text" style="z-index: 9;color: white;">Compressing: <strong>0%</strong></span>
 				  </div>
 				</div>

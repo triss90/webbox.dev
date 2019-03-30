@@ -6,15 +6,15 @@
 
 	<div class="row">
 
-		<div class="col">
-			<div class="alert alert-dismissible alert-light">
-				<button type="button" class="close" data-dismiss="alert">&times;</button>
-				<strong>Disclaimer!</strong> We do <i><u>not</u></i> log any of your data or track any of your usage on this site. <br>
-				The entire project is open source, and can be found on <i class="fa fa-github" aria-hidden="true"></i> <a href="#" class="alert-link">GitHub</a>.
-			</div>
-		</div>
+        <div class="col">
+            <div class="alert alert-dismissible alert-light">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Disclaimer</strong> We do <i><u>not</u></i> log any of your data or track any of your usage on this site. <br>
+                The entire project is open source, and can be found on <i class="fa fa-github" aria-hidden="true"></i> <a href="https://github.com/triss90/webbox.dev" target="_blank" class="alert-link">GitHub</a>.
+            </div>
+        </div>
 
-	</div>
+    </div>
 
 	<div class="row">
 
@@ -73,68 +73,20 @@
 			</div>
 		</div>
 
+        <div class="col-md-6">
+            <div class="card border-dark">
+                <div class="card-header"><span class="badge badge-success">networking</span></div>
+                <div class="card-body">
+                    <h4 class="card-title"><i class="fa fa-crosshairs" aria-hidden="true"></i> HTTP Headers</h4>
+                    <p class="card-text">Check HTTP Headers from URL</p>
+                    <a href="/http-headers" class="btn btn-outline-secondary">Get Headers</a>
+                </div>
+            </div>
+        </div>
+
 	</div>
 
 </div>
 
 <?php include('_inc/scripts.php'); ?>
-
-<script>
-	$('#button_sendgrid').click(function() {
-		$('#server').val('smtp.sendgrid.net');
-		$('#port').val('25');
-		$('#security').val('auto');
-		$('#server').focus();
-	});
-	$('#button_mailgun').click(function() {
-		$('#server').val('smtp.mailgun.org');
-		$('#port').val('25');
-		$('#security').val('auto');
-		$('#server').focus();
-	});
-	$('#button_jango').click(function() {
-		$('#server').val('express-relay.jangosmtp.net');
-		$('#port').val('2525');
-		$('#security').val('auto');
-		$('#server').focus();
-	});
-	$('#button_smtp2go').click(function() {
-		$('#server').val('mail.smtp2go.com');
-		$('#port').val('2525');
-		$('#security').val('auto');
-		$('#server').focus();
-	});
-	$('#button_office365').click(function() {
-		$('#server').val('smtp.office365.com');
-		$('#port').val('587');
-		$('#security').val('TLS');
-		$('#server').focus();
-	});
-	$('#button_gmail').click(function() {
-		$('#server').val('smtp.gmail.com');
-		$('#port').val('465');
-		$('#security').val('SSL');
-		$('#server').focus();
-	});
-	$(function () {
-		$('form').on('submit', function (e) {
-			e.preventDefault();
-			$('#buttonSubmit').hide();
-			$('#buttonLoad').show();
-			$.ajax({
-				type: 'post',
-				url: 'smtptest.php',
-				data: $('#smtpTest').serialize(),
-				success: function(response) {
-					$('#buttonLoad').hide();
-					$('#buttonSubmit').show();
-					$('#output-wrapper').addClass('active');
-					$('#output').html(response);
-					hljs.initHighlighting();
-				}
-			});
-		});
-	});
-</script>
-
 <?php include('_inc/footer.php'); ?>
