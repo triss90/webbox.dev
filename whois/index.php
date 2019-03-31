@@ -52,7 +52,6 @@
 				e.preventDefault();
                 $('#buttonSubmit').hide();
                 $('#buttonLoad').show();
-                hljs.initHighlighting();
                 setTimeout(function(){
                     $.ajax({
                         type: 'post',
@@ -63,7 +62,8 @@
                             $('#buttonSubmit').show();
                             $('#output-wrapper').addClass('active');
                             $('#output').html(response);
-                            hljs.highlightBlock();
+                            hljs.initHighlighting.called = false;
+                            hljs.initHighlighting();
                         }
                     });
                 }, 1000);
