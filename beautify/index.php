@@ -1,5 +1,5 @@
 <?php
-    $pageName = "Crontab Generator";
+    $pageName = "Code Beautifier";
 ?>
 <?php include('../_inc/header.php'); ?>
 <head>
@@ -41,7 +41,7 @@
 
 	  		<div class="row">
 				<div class="col">
-                    <form><textarea id="code" name="code"></textarea></form>
+                    <form><textarea id="code" name="code" autofocus></textarea></form>
 			    </div>
 			</div>
 

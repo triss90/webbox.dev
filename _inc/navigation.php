@@ -39,6 +39,7 @@
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="toolbox"> Programming <span class="caret"></span></a>
                 <div class="dropdown-menu" aria-labelledby="toolbox">
                     <a class="dropdown-item" href="../beautify/">Code Beautifier</a>
+                    <a class="dropdown-item" href="../markdown-editor/">Markdown Editor</a>
                 </div>
             </li>
         </ul>

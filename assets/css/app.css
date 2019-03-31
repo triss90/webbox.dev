@@ -406,6 +406,32 @@ pre {
 .nav-link {
 	margin-left: 1rem;
 }
+.markdown-editor .markdown,
+.markdown-editor .html,
+.markdown-editor .output {
+	width: 100%;
+	padding: 10px;
+	background: #073642 !important;
+	border: 0;
+	height: 300px;
+	overflow: scroll;
+	color: #839496;
+	border-radius: 4px !important;
+}
+.markdown-editor .markdown {
+	resize: none;
+}
+.markdown-editor .html {
+
+}
+.markdown-editor .html .hljs.xml {
+	background: transparent;
+}
+.markdown-editor .output {
+	margin-top: 10px;
+}
+
+
 
 
 /* ##################### */

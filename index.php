@@ -117,6 +117,17 @@
             </div>
         </div>
 
+        <div class="col-md-6">
+            <div class="card border-dark">
+                <div class="card-header"><span class="badge badge-primary">programming</span></div>
+                <div class="card-body">
+                    <h4 class="card-title"><i class="fa fa-paragraph" aria-hidden="true"></i> Markdown Editor</h4>
+                    <p class="card-text">Compile and edit markdown. See both HTML and rendered view</p>
+                    <a href="/markdown-editor/" class="btn btn-outline-secondary">Compile Markdown</a>
+                </div>
+            </div>
+        </div>
+
 	</div>
 
 </div>
