@@ -33,14 +33,15 @@ $location = json_decode($location);
 
 				<div class="col-6 col-md-8">
 					<div class="form-group">
-						<input type="text" name="ip" id="ip" class="form-control my-1" placeholder="<?php echo $ip; ?>" required >
+                        <label for="ip">IP Address:</label>
+                        <input type="text" pattern="((^|\.)((25[0-5])|(2[0-4]\d)|(1\d\d)|([1-9]?\d))){4}$" name="ip" id="ip" class="form-control my-1" placeholder="<?php echo $ip; ?>" required >
 					</div>
 			    </div>
 
 			    <div class="col-6 col-md-4">
-					<button id="buttonSubmit" type="submit" class="btn btn-success btn-block">Look Up IP</button>
+					<button id="buttonSubmit" type="submit" class="btn btn-success btn-block" style="margin-top: 2.2rem;">Look Up IP</button>
 
-					<button id="buttonLoad" class="btn btn-success btn-block" type="button" style="display:none;margin-top:0.25rem;" disabled>
+					<button id="buttonLoad" class="btn btn-success btn-block" type="button" style="display:none;margin-top:2.2rem;" disabled>
 						<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
 						Loading...
 					</button>

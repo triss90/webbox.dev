@@ -15,14 +15,15 @@
 
 				<div class="col-6 col-md-8">
 					<div class="form-group">
-						<input type="text" name="domainName" id="domainName" class="form-control my-1" placeholder="example.com" required>
+                        <label for="domainName">Domain name:</label>
+						<input type="text" pattern="^([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}$" name="domainName" id="domainName" class="form-control" placeholder="example.com" required>
 					</div>
 			    </div>
 
 			    <div class="col-6 col-md-4">
-					<button id="buttonSubmit" type="submit" class="btn btn-success btn-block">Check domain availability</button>
+					<button id="buttonSubmit" type="submit" class="btn btn-success btn-block" style="margin-top: 2rem;">Check domain availability</button>
 
-					<button id="buttonLoad" class="btn btn-success btn-block" type="button" style="display:none;margin-top:0.25rem;" disabled>
+					<button id="buttonLoad" class="btn btn-success btn-block" type="button" style="display:none;margin-top: 2rem;" disabled>
 						<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
 						Loading...
 					</button>
@@ -51,6 +52,7 @@
 				e.preventDefault();
                 $('#buttonSubmit').hide();
                 $('#buttonLoad').show();
+                hljs.initHighlighting();
                 setTimeout(function(){
                     $.ajax({
                         type: 'post',
@@ -61,7 +63,7 @@
                             $('#buttonSubmit').show();
                             $('#output-wrapper').addClass('active');
                             $('#output').html(response);
-                            hljs.initHighlighting();
+                            hljs.highlightBlock();
                         }
                     });
                 }, 1000);
