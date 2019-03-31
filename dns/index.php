@@ -1,12 +1,14 @@
 <?php
     $pageName = "DNS Lookup";
+    $pageDescription = "Look up DNS records on any domain and monitor changes to records.";
 ?>
 <?php include('../_inc/header.php'); ?>
 
 <?php include('../_inc/navigation.php'); ?>
 
   	<div class="container">
-  		<h1>DNS Lookup</h1><br>
+  		<h1>DNS Lookup</h1>
+        <h5>Look up DNS records on any domain and monitor changes to records.</h5><br>
 
 		<form id="dnsTest" action="getdns.php" method="post" accept-charset="utf-8">
 	  		<div class="row">

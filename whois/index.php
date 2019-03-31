@@ -1,12 +1,14 @@
 <?php
     $pageName = "Whois Lookup";
+    $pageDescription = "Check domain availability and contact information with a simply whois lookup.";
 ?>
 <?php include('../_inc/header.php'); ?>
 
 <?php include('../_inc/navigation.php'); ?>
 
   	<div class="container">
-  		<h1>Whois Lookup</h1><br>
+  		<h1>Whois Lookup</h1>
+        <h5>Check domain availability and contact information with a simply whois lookup.</h5><br>
 
 		<form id="whoisTest" action="whoislookup.php" method="post" accept-charset="utf-8">
 	  		<div class="row">

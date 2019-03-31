@@ -1,5 +1,6 @@
 <?php
     $pageName = "IP Lookup";
+    $pageDescription = "Check your public IP, location, ISP and more.";
 ?>
 <?php include('../_inc/header.php'); ?>
 
@@ -24,14 +25,15 @@ $location = json_decode($location);
 ?>
 
   	<div class="container">
-  		<h1>Public IP Lookup</h1><br>
+  		<h1>Public IP Lookup</h1>
+        <h5>Check your public IP, location, ISP and more.</h5><br>
 
 		<form id="ipInfo" action="ipinfo.php" method="post" accept-charset="utf-8">
 	  		<div class="row">
 
 				<div class="col-6 col-md-8">
 					<div class="form-group">
-						<input type="text" name="ip" id="ip" class="form-control my-1" placeholder="12.345.56.789" required value="<?php echo $ip; ?>">
+						<input type="text" name="ip" id="ip" class="form-control my-1" placeholder="<?php echo $ip; ?>" required >
 					</div>
 			    </div>
 

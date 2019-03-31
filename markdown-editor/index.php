@@ -1,12 +1,15 @@
 <?php
     $pageName = "Markdown Editor";
+    $pageDescription = "Compile and edit markdown. See both HTML and rendered view";
 ?>
 <?php include('../_inc/header.php'); ?>
 
 <?php include('../_inc/navigation.php'); ?>
 
   	<div class="container">
-  		<h1>Markdown Editor</h1><br>
+  		<h1>Markdown Editor</h1>
+        <h5>Compile and edit markdown. See both HTML and rendered view</h5>
+        <br>
 
         <section class="markdown-editor full">
             <div class="row">

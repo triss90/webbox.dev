@@ -1,5 +1,6 @@
 <?php
     $pageName = "Code Beautifier";
+    $pageDescription = "Beautify compressed and obfuscated HTML, CSS and Javascript code.";
 ?>
 <?php include('../_inc/header.php'); ?>
 <head>
@@ -25,7 +26,8 @@
 <?php include('../_inc/navigation.php'); ?>
 
   	<div class="container">
-  		<h1>Beautify Code</h1><br>
+  		<h1>Beautify Code</h1>
+        <h5>Beautify compressed and obfuscated HTML, CSS and Javascript code.</h5><br>
 
             <div class="row">
                 <div class="col-md-2">

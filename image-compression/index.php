@@ -1,10 +1,14 @@
-
+<?php
+    $pageName = "Image Compression";
+    $pageDescription = "Make your images ready for the internet by compressing them by up to 90%, all without loosing quality.";
+?>
 <?php include('../_inc/header.php'); ?>
 
 <?php include('../_inc/navigation.php'); ?>
 
   	<div class="container">
-  		<h1>Compress Image</h1><br>
+  		<h1>Compress Image</h1>
+        <h5>Make your images ready for the internet by compressing them by up to 90%, all without loosing quality.</h5><br>
 
   		<div class="row">
   			<div class="col">

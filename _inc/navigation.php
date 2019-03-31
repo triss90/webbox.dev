@@ -29,12 +29,12 @@
                     <a class="dropdown-item" href="../image-compression/">Image Compression</a>
                 </div>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="toolbox"> Server <span class="caret"></span></a>
-                <div class="dropdown-menu" aria-labelledby="toolbox">
-                    <a class="dropdown-item" href="../crontab-generator/">Crontab Generator</a>
-                </div>
-            </li>
+<!--            <li class="nav-item dropdown">-->
+<!--                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="toolbox"> Server <span class="caret"></span></a>-->
+<!--                <div class="dropdown-menu" aria-labelledby="toolbox">-->
+<!--                    <a class="dropdown-item" href="../crontab-generator/">Crontab Generator</a>-->
+<!--                </div>-->
+<!--            </li>-->
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="toolbox"> Programming <span class="caret"></span></a>
                 <div class="dropdown-menu" aria-labelledby="toolbox">

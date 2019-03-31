@@ -1,11 +1,13 @@
 <?php
     $pageName = "Crontab Generator";
+    $pageDescription = "The quick and simple editor for cron schedule expressions.";
 ?>
 <?php include('../_inc/header.php'); ?>
 <?php include('../_inc/navigation.php'); ?>
 
   	<div class="container">
-  		<h1>Crontab Generator</h1><br>
+  		<h1>Crontab Generator</h1>
+        <h5>The quick and simple editor for cron schedule expressions.</h5><br>
         <!-- https://crontab-generator.org -->
 
 	  		<div class="row">

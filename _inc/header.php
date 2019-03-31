@@ -9,6 +9,9 @@
     if($pageName == "") {
         $pageName = "Home";
     }
+    if($pageDescription == "") {
+        $pageDescription = "Webbox is a curated list of webbtols ranging from network management tools like SMTP testing to advanced image compression and more.";
+    }
 ?>
 
 <!doctype html>
@@ -17,7 +20,7 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="Webbox is a curated list of webbtols ranging from network management tools like SMTP testing to advanced image compression and more.">
+        <meta name="description" content="<?php echo $pageDescription; ?>">
         <meta name="keywords" content="">
         <meta name="author" content="Tristan White">
 

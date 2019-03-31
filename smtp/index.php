@@ -1,12 +1,14 @@
 <?php
     $pageName = "SMTP Test";
+    $pageDescription = "Test your connection to Sendgrid, Mailgun, Amazon SES, or any other SMTP server. See the exact SMTP \"conversation\" to help you troubleshoot email issues.";
 ?>
 <?php include('../_inc/header.php'); ?>
 
 <?php include('../_inc/navigation.php'); ?>
 
   	<div class="container">
-  		<h1>Test SMTP Settings</h1><br>
+  		<h1>Test SMTP Settings</h1>
+        <h5>Test your connection to Sendgrid, Mailgun, Amazon SES, or any other SMTP server. See the exact SMTP "conversation" to help you troubleshoot email issues.</h5><br>
 
 		<form id="smtpTest" action="smtptest.php" method="post" accept-charset="utf-8">
 

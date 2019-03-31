@@ -1,12 +1,14 @@
 <?php
     $pageName = "HTTP Headers";
+    $pageDescription = "Check HTTP Headers from URL.";
 ?>
 <?php include('../_inc/header.php'); ?>
 
 <?php include('../_inc/navigation.php'); ?>
 
   	<div class="container">
-  		<h1>HTTP Headers</h1><br>
+  		<h1>HTTP Headers</h1>
+        <h5>Check HTTP Headers from URL.</h5><br>
 
 		<form id="headersTest" action="getheaders.php" method="post" accept-charset="utf-8">
 	  		<div class="row">
