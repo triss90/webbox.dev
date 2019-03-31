@@ -48,10 +48,10 @@ $location = json_decode($location);
 
 		<br>
 
+        <h2 id="ipTitle">Your IP: <span class="text-success"><?php echo $ip; ?></span></h2>
   		<div class="row">
 
 			<div class="col" id="ip-info">
-
 
 				<ul class="list-group">
 					<li class="list-group-item d-flex justify-content-between align-items-center">
@@ -110,7 +110,7 @@ $location = json_decode($location);
 	if ($location->latitude != "" && $location->longitude != "") {
 	?>
 	//https://github.com/stamen/modestmaps-js/wiki
-	var template = 'http://tile.openstreetmap.org/{Z}/{X}/{Y}.png';
+	var template = 'https://tile.openstreetmap.org/{Z}/{X}/{Y}.png';
 	var provider = new MM.TemplatedLayer(template);
 	var map = new MM.Map('map', provider);
 	map.setZoom(10).setCenter({ lat: <?php echo $location->latitude; ?>, lon: <?php echo $location->longitude; ?> });
@@ -123,6 +123,7 @@ $location = json_decode($location);
 			e.preventDefault();
 			$('#buttonSubmit').hide();
 			$('#buttonLoad').show();
+			var selectedIP = $('#ip').val();
 			$.ajax({
 				type: 'post',
 				url: 'ipinfo.php',
@@ -131,6 +132,7 @@ $location = json_decode($location);
 					$('#buttonLoad').hide();
 					$('#buttonSubmit').show();
 					$('#ip-info').html(response);
+					$('#ipTitle').html("IP: <span class='text-success'>" + selectedIP + "<span>");
 				}
 			});
 		});

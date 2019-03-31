@@ -403,6 +403,9 @@ pre {
 	background: #282a36;
 	border-radius: 5px;
 }
+.nav-link {
+	margin-left: 1rem;
+}
 
 
 /* ##################### */

@@ -1,5 +1,5 @@
 <?php
-    $pageName = "DNS Lookup";
+    $pageName = "Whois Lookup";
 ?>
 <?php include('../_inc/header.php'); ?>
 

@@ -29,6 +29,17 @@
 			</div>
 		</div>
 
+        <div class="col-md-6">
+            <div class="card border-dark">
+                <div class="card-header"><span class="badge badge-primary">programming</span></div>
+                <div class="card-body">
+                    <h4 class="card-title"><i class="fa fa-code" aria-hidden="true"></i> Beautify Code</h4>
+                    <p class="card-text">Beautify compressed and obfuscated HTML, CSS and Javascript code</p>
+                    <a href="/beautify/" class="btn btn-outline-secondary">Beautify Code</a>
+                </div>
+            </div>
+        </div>
+
 		<div class="col-md-6">
 			<div class="card border-dark">
 				<div class="card-header"><span class="badge badge-success">networking</span></div>
@@ -51,16 +62,16 @@
 			</div>
 		</div>
 
-		<div class="col-md-6">
-			<div class="card border-dark">
-				<div class="card-header"><span class="badge badge-danger">graphic</span></div>
-				<div class="card-body">
-					<h4 class="card-title"><i class="fa fa-picture-o" aria-hidden="true"></i> Image Compression</h4>
-					<p class="card-text">Make your images ready for the internet by compressing them by up to 90%, all without loosing quality</p>
-					<a href="/image-compression/" class="btn btn-outline-secondary">Compress image</a>
-				</div>
-			</div>
-		</div>
+        <div class="col-md-6">
+            <div class="card border-dark">
+                <div class="card-header"><span class="badge badge-info">server</span></div>
+                <div class="card-body">
+                    <h4 class="card-title"><i class="fa fa-terminal" aria-hidden="true"></i> Crontab Generator</h4>
+                    <p class="card-text">The quick and simple editor for cron schedule expressions</p>
+                    <a href="/crontab-generator/" class="btn btn-outline-secondary">Generate Cronjobs</a>
+                </div>
+            </div>
+        </div>
 
 		<div class="col-md-6">
 			<div class="card border-dark">
@@ -91,6 +102,17 @@
                     <h4 class="card-title"><i class="fa fa-globe" aria-hidden="true"></i> Whois</h4>
                     <p class="card-text">Check domain availability and contact information with a simply whois lookup</p>
                     <a href="/whois/" class="btn btn-outline-secondary">Whois Lookup</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card border-dark">
+                <div class="card-header"><span class="badge badge-danger">graphic</span></div>
+                <div class="card-body">
+                    <h4 class="card-title"><i class="fa fa-picture-o" aria-hidden="true"></i> Image Compression</h4>
+                    <p class="card-text">Make your images ready for the internet by compressing them by up to 90%, all without loosing quality</p>
+                    <a href="/image-compression/" class="btn btn-outline-secondary">Compress image</a>
                 </div>
             </div>
         </div>
