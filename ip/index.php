@@ -1,6 +1,7 @@
 <?php
     $pageName = "IP Lookup";
     $pageDescription = "Check your public IP, location, ISP and more.";
+    $pageKeywords = "my ip, what is my ip, whats my ip, myip, ip address, ip address lookup";
 ?>
 <?php include('../_inc/header.php'); ?>
 

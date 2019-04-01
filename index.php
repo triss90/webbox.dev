@@ -74,12 +74,12 @@
 <!--        </div>-->
 
         <div class="col-md-6">
-            <div class="card border-dark bg-danger">
+            <div class="card border-danger">
                 <div class="card-header"><span class="badge badge-light">sponsored</span></div>
-                <div class="card-body text-light">
+                <div class="card-body ktext-light">
                     <h4 class="card-title"><img src="/assets/img/colordrop.png" style="display: inline-block; width: 32px;" alt=""> ColorDrop</h4>
                     <p class="card-text">Thousands of curated colors, palettes for use in your products.</p>
-                    <a href="https://colordrop.io" target="_blank" class="btn btn-outline-light">Visit colordrop.io</a>
+                    <a href="https://colordrop.io" target="_blank" class="btn btn-outline-secondary">Visit colordrop.io</a>
                 </div>
             </div>
         </div>

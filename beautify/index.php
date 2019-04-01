@@ -1,6 +1,7 @@
 <?php
     $pageName = "Code Beautifier";
     $pageDescription = "Beautify compressed and obfuscated HTML, CSS and Javascript code.";
+    $pageKeywords = "beautify css,beautify html,beautify js,prettify css,prettify html,prettify js,uncompress js,uncompress css,uncompress html";
 ?>
 <?php include('../_inc/header.php'); ?>
 <head>

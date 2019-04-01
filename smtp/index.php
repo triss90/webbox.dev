@@ -1,6 +1,7 @@
 <?php
     $pageName = "SMTP Test";
     $pageDescription = "Test your connection to Sendgrid, Mailgun, Amazon SES, or any other SMTP server. See the exact SMTP \"conversation\" to help you troubleshoot email issues.";
+    $pageKeywords = "smtp, test, check, server, connection, port, host, mail, email, auth, tool, online, secure, free, simple, smtper"
 ?>
 <?php include('../_inc/header.php'); ?>
 

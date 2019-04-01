@@ -1,6 +1,7 @@
 <?php
     $pageName = "Color Converter";
     $pageDescription = "Convert any color code to a number of different formats among which are HEX, RGB, HSV, HSL and CMYK.";
+    $pageKeywords = "hex,hsv,hsl,rgb,cmyk,color,code,hex converter,hsv converter,rgb converter,hsl converter,cmyk converter";
 ?>
 
 <?php include('../_inc/header.php'); ?>

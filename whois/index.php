@@ -1,6 +1,7 @@
 <?php
     $pageName = "Whois Lookup";
     $pageDescription = "Check domain availability and contact information with a simply whois lookup.";
+    $pageKeywords = "whois,whois lookup ,domain whois ,whois search,whois domain ,domain names ,domain names search ,domain name registration ,domain names availability,whois database ,who is domain ,who owns domain ,who is domain name,who owns a domain name,who owns a domain,who is search,whois domain lookup ,whois domain name,whois.net,whois.org";
 ?>
 <?php include('../_inc/header.php'); ?>
 

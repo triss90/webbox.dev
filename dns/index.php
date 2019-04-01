@@ -1,6 +1,7 @@
 <?php
     $pageName = "DNS Lookup";
     $pageDescription = "Look up DNS records on any domain and monitor changes to records.";
+    $pageKeywords = "dns lookup, dns details, dns information"
 ?>
 <?php include('../_inc/header.php'); ?>
 

@@ -1,6 +1,7 @@
 <?php
     $pageName = "Markdown Editor";
     $pageDescription = "Compile and edit markdown. See both HTML and rendered view";
+    $pageKeywords = "edit markdown, markdowneditor, markdown editor, markdown online, markdown webeditor, compile markdown";
 ?>
 <?php include('../_inc/header.php'); ?>
 

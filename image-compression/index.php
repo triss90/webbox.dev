@@ -1,6 +1,7 @@
 <?php
     $pageName = "Image Compression";
     $pageDescription = "Make your images ready for the internet by compressing them by up to 90%, all without loosing quality.";
+    $pageKeywords = "minify web,Minify Image,optimize images,compress images";
 ?>
 <?php include('../_inc/header.php'); ?>
 

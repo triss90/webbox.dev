@@ -12,6 +12,9 @@
     if($pageDescription == "") {
         $pageDescription = "Webbox is a curated list of webbtols ranging from network management tools like SMTP testing to advanced image compression and more.";
     }
+    if($pageKeywords == "") {
+        $pageKeywords = "Useful online tools like Beautifiers, Minifiers, Converters, Utilities, Validators, Editors for users and developers.";
+    }
 ?>
 
 <!doctype html>
@@ -21,7 +24,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="<?php echo $pageDescription; ?>">
-        <meta name="keywords" content="">
+        <meta name="keywords" content="<?php echo $pageKeywords; ?>">
         <meta name="author" content="Tristan White">
 
         <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
