@@ -40,16 +40,16 @@
 				<br>
 
                 <div class="row">
-                    <div class="input-group col-md-4">
+                    <div class="input-group col-md-4 mb-3 mb-md-0">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1">RGB</span>
                         </div>
                         <input type="text" class="form-control color-input-rgb-r" maxlength="3" placeholder="240">
                     </div>
-                    <div class="input-group col-md-4">
+                    <div class="input-group col-md-4 mb-3 ml-5 mb-md-0 ml-md-0">
                         <input type="text" class="form-control color-input-rgb-g" maxlength="3" placeholder="109">
                     </div>
-                    <div class="input-group col-md-4">
+                    <div class="input-group col-md-4 mb-3 ml-5 mb-md-0 ml-md-0">
                         <input type="text" class="form-control color-input-rgb-b" maxlength="3" placeholder="6">
                         <div class="input-group-append">
                             <button class="btn btn-danger color-submit-rgb" type="button">Convert</button>
@@ -60,16 +60,16 @@
                 <br>
 
                 <div class="row">
-                    <div class="input-group col-md-4">
+                    <div class="input-group col-md-4 mb-3 mb-md-0">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1">HSV</span>
                         </div>
                         <input type="text" class="form-control color-input-hsv-h" maxlength="3" placeholder="142">
                     </div>
-                    <div class="input-group col-md-4">
+                    <div class="input-group col-md-4 mb-3 ml-5 mb-md-0 ml-md-0">
                         <input type="text" class="form-control color-input-hsv-s" maxlength="3" placeholder="89">
                     </div>
-                    <div class="input-group col-md-4">
+                    <div class="input-group col-md-4 mb-3 ml-5 mb-md-0 ml-md-0">
                         <input type="text" class="form-control color-input-hsv-v" maxlength="3" placeholder="121">
                         <div class="input-group-append">
                             <button class="btn btn-danger color-submit-hsv" type="button">Convert</button>
@@ -80,18 +80,18 @@
                 <br>
 
                 <div class="row">
-                    <div class="input-group col-md-4">
+                    <div class="input-group col-md-4 mb-3 mb-md-0">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1">HSL</span>
                         </div>
                         <input type="text" class="form-control color-input-hsl-h" maxlength="3" placeholder="26">
                     </div>
 
-                    <div class="input-group col-md-4">
+                    <div class="input-group col-md-4 mb-3 ml-5 mb-md-0 ml-md-0">
                         <input type="text" class="form-control color-input-hsl-s" maxlength="3" placeholder="95">
                     </div>
 
-                    <div class="input-group col-md-4">
+                    <div class="input-group col-md-4 mb-3 ml-5 mb-md-0 ml-md-0">
                         <input type="text" class="form-control color-input-hsl-l" maxlength="3" placeholder="48">
                         <div class="input-group-append">
                             <button class="btn btn-danger color-submit-hsl" type="button">Convert</button>
@@ -102,19 +102,19 @@
 				<br>
 
         		<div class="row">
-                    <div class="input-group col-md-3">
+                    <div class="input-group col-md-3 mb-3 mb-md-0">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1">CMYK</span>
                         </div>
                         <input type="text" class="form-control color-input-cmyk-c" maxlength="12" placeholder="0">
                     </div>
-                    <div class="input-group col-md-3">
+                    <div class="input-group col-md-3 mb-3 ml-5 mb-md-0 ml-md-0">
                         <input type="text" class="form-control color-input-cmyk-m" maxlength="12" placeholder="0.3321">
                     </div>
-                    <div class="input-group col-md-3">
+                    <div class="input-group col-md-3 mb-3 ml-5 mb-md-0 ml-md-0">
                         <input type="text" class="form-control color-input-cmyk-y" maxlength="12" placeholder="0.1123">
                     </div>
-                    <div class="input-group col-md-3">
+                    <div class="input-group col-md-3 mb-3 ml-5 mb-md-0 ml-md-0">
                         <input type="text" class="form-control color-input-cmyk-k" maxlength="12" placeholder="0">
                         <div class="input-group-append">
                             <button class="btn btn-danger color-submit-cmyk" type="button">Convert</button>

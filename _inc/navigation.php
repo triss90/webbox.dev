@@ -20,6 +20,7 @@
                     <a class="dropdown-item" href="../smtp/">SMTP Test</a>
                     <a class="dropdown-item" href="../http-headers/">HTTP Headers</a>
                     <a class="dropdown-item" href="../whois/">Whois Lookup</a>
+                    <a class="dropdown-item" href="../port-scanner/">Port Scanner</a>
                 </div>
             </li>
             <li class="nav-item dropdown">

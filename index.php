@@ -110,6 +110,17 @@
             <div class="card border-dark">
                 <div class="card-header"><span class="badge badge-success">networking</span></div>
                 <div class="card-body">
+                    <h4 class="card-title"><i class="fa fa-random" aria-hidden="true"></i> Port Scanner</h4>
+                    <p class="card-text">Check if a port is online or not. Enter a hostname or an IP address and comma separated ports to check those ports status.</p>
+                    <a href="/port-scanner/" class="btn btn-outline-secondary">Scan Ports</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card border-dark">
+                <div class="card-header"><span class="badge badge-success">networking</span></div>
+                <div class="card-body">
                     <h4 class="card-title"><i class="fa fa-compress" aria-hidden="true"></i> IP Lookup</h4>
                     <p class="card-text">Check your public IP, location, ISP and more.</p>
                     <a href="/ip/" class="btn btn-outline-secondary">Look up IP</a>

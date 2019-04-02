@@ -41,11 +41,11 @@
 			<br>
 
 			<div class="row">
-				<div class="col">
+				<div class="">
 					<label class="my-1 mr-2" for="username">Username</label>
 					<input type="text" name="username" id="username" class="form-control" placeholder="Username">
 				</div>
-				<div class="col">
+				<div class="col mb-3">
 					<label class="my-1 mr-2" for="password">Password</label>
 					<input type="password" name="password" id="password" class="form-control" placeholder="Passw0rd" data-toggle="tooltip" data-placement="top" title="" data-original-title="We don't save or log this!">
 				</div>
@@ -54,11 +54,11 @@
 			<br>
 
 			<div class="row">
-				<div class="col">
+				<div class="col mb-3">
 					<label class="my-1 mr-2" for="fromEmail">From email address</label>
 					<input type="text" name="fromEmail" id="fromEmail" class="form-control" placeholder="From Email">
 				</div>
-				<div class="col">
+				<div class="col mb-3">
 					<label class="my-1 mr-2" for="toEmail">To email address</label>
 					<input type="text" name="toEmail" id="toEmail" class="form-control" placeholder="To Email">
 				</div>

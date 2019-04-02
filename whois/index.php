@@ -14,14 +14,14 @@
 		<form id="whoisTest" action="whoislookup.php" method="post" accept-charset="utf-8">
 	  		<div class="row">
 
-				<div class="col-6 col-md-8">
+				<div class="col-12 col-sm-6 col-md-8">
 					<div class="form-group">
                         <label for="domainName">Domain name:</label>
 						<input type="text" pattern="^([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}$" name="domainName" id="domainName" class="form-control" placeholder="example.com" required>
 					</div>
 			    </div>
 
-			    <div class="col-6 col-md-4">
+			    <div class="col-12 col-sm-6 col-md-4">
 					<button id="buttonSubmit" type="submit" class="btn btn-success btn-block" style="margin-top: 2rem;">Check domain availability</button>
 
 					<button id="buttonLoad" class="btn btn-success btn-block" type="button" style="display:none;margin-top: 2rem;" disabled>

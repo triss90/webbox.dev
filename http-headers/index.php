@@ -13,14 +13,14 @@
 		<form id="headersTest" action="getheaders.php" method="post" accept-charset="utf-8">
 	  		<div class="row">
 
-				<div class="col-6 col-md-8">
+				<div class="col-12 col-sm-6 col-md-8">
 					<div class="form-group">
                         <label for="domainName">IP Address:</label>
                         <input type="url" name="domainName" id="domainName" class="form-control my-1" placeholder="https://example.com" required>
 					</div>
 			    </div>
 
-			    <div class="col-6 col-md-4">
+			    <div class="col-12 col-sm-6 col-md-4">
 					<button id="buttonSubmit" type="submit" class="btn btn-success btn-block" style="margin-top: 2.2rem;">Look Up Headers</button>
 
 					<button id="buttonLoad" class="btn btn-success btn-block" type="button" style="display:none;margin-top:2.2rem;" disabled>
