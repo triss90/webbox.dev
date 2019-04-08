@@ -11,6 +11,10 @@
 	<?php
 	$domain = htmlspecialchars($_POST['domainName']);
 	$dns = dns_get_record($domain);
+	$repeat = $_POST['repeat'];
+	if ($repeat != "") {
+	    $repeat = "&repeat=1";
+    }
 
 	foreach($dns as $item) {
 		// Check if type is set
@@ -57,3 +61,6 @@
 	?>
 	</tbody>
 </table>
+<script>
+    window.history.pushState('DNS Lookup', 'Title', '/dns/index.php?<?php echo $domain ."". $repeat;?>');
+</script>

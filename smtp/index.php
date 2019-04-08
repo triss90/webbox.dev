@@ -41,7 +41,7 @@
 			<br>
 
 			<div class="row">
-				<div class="">
+				<div class="col mb-3">
 					<label class="my-1 mr-2" for="username">Username</label>
 					<input type="text" name="username" id="username" class="form-control" placeholder="Username">
 				</div>

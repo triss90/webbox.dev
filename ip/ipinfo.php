@@ -1,5 +1,9 @@
 <?php
 $ip = $_POST['ip'];
+if (!filter_var($ip, FILTER_VALIDATE_IP)) {
+    die();
+}
+
 $apiKey = "005f6f1b544dba2440ff466d24b812b8";
 $location = file_get_contents('http://api.ipstack.com/'.$ip.'?access_key='.$apiKey);
 $location = json_decode($location);

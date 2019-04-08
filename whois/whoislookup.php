@@ -8,12 +8,12 @@ $domain = new Phois\Whois\Whois($sld);
 
 $whois_answer = $domain->info();
 
-echo $whois_answer;
+echo $whois_answer . "<br>";
 
 if ($domain->isAvailable()) {
-    echo "Domain is available\n";
+    echo "Domain is available <br>";
 } else {
-    echo "Domain is registered\n";
+    echo "Domain is registered <br>";
 }
 
 ?>

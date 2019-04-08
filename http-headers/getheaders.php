@@ -1,6 +1,9 @@
 <ul class="list-group">
 <?php
     $url = htmlspecialchars($_POST['domainName']);
+    if (!filter_var($url, FILTER_VALIDATE_URL)) {
+        die();
+    }
 
     if (substr( $url, 0, 8 ) != "https://") {
         if (strpos($url,'http://') === false){
