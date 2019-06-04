@@ -44,9 +44,10 @@
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="toolbox"> Misc <span class="caret"></span></a>
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="toolbox"> Security <span class="caret"></span></a>
                 <div class="dropdown-menu" aria-labelledby="toolbox">
                     <a class="dropdown-item" href="../password/">Password Generator</a>
+                    <a class="dropdown-item" href="../htpasswd/">.htpasswd Generator</a>
                 </div>
             </li>
         </ul>
