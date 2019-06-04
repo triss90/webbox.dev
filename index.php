@@ -18,6 +18,17 @@
 
 	<div class="row">
 
+        <div class="col-md-6">
+            <div class="card border-dark">
+                <div class="card-header"><span class="badge badge-info">miscellaneous</span></div>
+                <div class="card-body">
+                    <h4 class="card-title"><i class="fa fa-key" aria-hidden="true"></i> Secure Password Generator</h4>
+                    <p class="card-text">Generate passwords securely on your device.</p>
+                    <a href="/password-generator/" class="btn btn-outline-secondary">Generate Password</a>
+                </div>
+            </div>
+        </div>
+
 		<div class="col-md-6">
 			<div class="card border-dark">
 				<div class="card-header"><span class="badge badge-success">networking</span></div>

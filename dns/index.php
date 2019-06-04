@@ -6,7 +6,6 @@
     $repeat = htmlspecialchars($_GET["repeat"]);
 ?>
 
-
 <?php include('../_inc/header.php'); ?>
 
 <?php include('../_inc/navigation.php'); ?>
@@ -14,8 +13,18 @@
   	<div class="container">
   		<h1>DNS Lookup</h1>
         <h5>Look up DNS records on any domain and monitor changes to records.</h5><br>
-        <code>https://webbox.dev/dns/index.php?domain=<span class="badge badge-success">example.com</span>&repeat=<span class="badge badge-success">1</code>
+        <code>https://webbox.dev/dns/?domain=<span class="badge badge-success">example.com</span>&repeat=<span class="badge badge-success">1</code>
         <br><br>
+        <?php
+//        $host = "emilywhite.dk";
+//        $ns = "8.8.8.8"; // Google
+////        $ns = "1.1.1.1"; // Cloudflare
+////        $ns = "194.239.134.83"; // TDC
+//        exec("host -a $host $ns 2>&1", $lookupOutput);
+//        echo "<pre>";
+//        var_dump(array_reverse($lookupOutput));
+//        echo "</pre>";
+        ?>
 
 		<form id="dnsTest" action="getdns.php" method="post" accept-charset="utf-8">
 	  		<div class="row">
@@ -28,7 +37,7 @@
 
 					<div class="custom-control custom-checkbox">
 						<input type="checkbox" class="custom-control-input" name="repeat" id="repeat" <?php if($repeat == 1) {echo "checked"; } ?>>
-						<label class="custom-control-label" for="repeat">Repeat every 5 seconds</label>
+						<label class="custom-control-label" for="repeat">Refresh every 5 seconds</label>
 					</div>
 			    </div>
 
@@ -41,6 +50,7 @@
 					</button>
 			    </div>
 			</div>
+
 		</form>
 		<br>
 		<div class="row">
