@@ -6,7 +6,6 @@ $pageDescription = "Generate .htpasswd username and password combinations.";
 <?php include('../_inc/navigation.php'); ?>
 
 
-
 <div class="container">
     <h1>.htpasswd Generator</h1>
     <h5>Generate .htpasswd username and password combinations.</h5><br>

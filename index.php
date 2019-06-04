@@ -40,6 +40,7 @@
 			</div>
 		</div>
 
+
         <div class="col-md-6">
             <div class="card border-dark">
                 <div class="card-header"><span class="badge badge-primary">programming</span></div>
@@ -47,6 +48,17 @@
                     <h4 class="card-title"><i class="fa fa-code" aria-hidden="true"></i> Beautify Code</h4>
                     <p class="card-text">Beautify compressed and obfuscated HTML, CSS and Javascript code.</p>
                     <a href="/beautify/" class="btn btn-outline-secondary">Beautify Code</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card border-dark">
+                <div class="card-header"><span class="badge badge-info">security</span></div>
+                <div class="card-body">
+                    <h4 class="card-title"><i class="fa fa-lock" aria-hidden="true"></i> .htpasswd Generator</h4>
+                    <p class="card-text">Generate .htpasswd username and password combinations.</p>
+                    <a href="/htpasswd/" class="btn btn-outline-secondary">Generate .htpasswd</a>
                 </div>
             </div>
         </div>
