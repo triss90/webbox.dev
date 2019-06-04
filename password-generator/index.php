@@ -7,7 +7,7 @@ $pageDescription = "The quick and easy password generator";
 
 <div class="container">
     <h1>Secure Password Generator</h1>
-    <h5>Generate passwords securely on your device. No information is sent to our servers! Source code is available <a href="" title="password generator sourcecode">here</a></h5><br>
+    <h5>Generate passwords securely on your device. No information is sent to our servers! <br>Source code is available <a href="https://github.com/triss90/webbox.dev/blob/master/password-generator/index.php" target="_blank" title="password generator sourcecode">here</a>.</h5><br>
 
 
     <div class="row">
