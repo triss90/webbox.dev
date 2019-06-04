@@ -24,7 +24,7 @@
                 <div class="card-body">
                     <h4 class="card-title"><i class="fa fa-key" aria-hidden="true"></i> Secure Password Generator</h4>
                     <p class="card-text">Generate passwords securely on your device.</p>
-                    <a href="/password-generator/" class="btn btn-outline-secondary">Generate Password</a>
+                    <a href="/password/" class="btn btn-outline-secondary">Generate Password</a>
                 </div>
             </div>
         </div>
