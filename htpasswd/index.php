@@ -29,8 +29,8 @@ $pageDescription = "Generate .htpasswd username and password combinations.";
             </div>
 
             <div class="col-12 col-sm-6 col-md-2">
-                <button id="buttonSubmit" type="submit" class="btn btn-success btn-block" style="margin-top: 2.2rem;">Generate .htpasswd</button>
-                <button id="buttonLoad" class="btn btn-success btn-block" type="button" style="display:none;margin-top:2.2rem;" disabled>
+                <button id="buttonSubmit" type="submit" class="btn btn-info btn-block" style="margin-top: 2.2rem;">Generate .htpasswd</button>
+                <button id="buttonLoad" class="btn btn-info btn-block" type="button" style="display:none;margin-top:2.2rem;" disabled>
                     <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
                     Loading...
                 </button>
