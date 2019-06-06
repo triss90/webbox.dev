@@ -4448,8 +4448,10 @@ $pageDescription = "Secure and easy client-side password generator";
 
     function passwordGenerator() {
 
-        if ($('#passphrase').is(':checked') == true ) {
-            localStorage.setItem('passphrase', 1);
+        if ($('#passphrase').is(':checked') == true) {
+            if ($('#save').is(':checked') == true) {
+                localStorage.setItem('passphrase', 1);
+            }
             passphraseGen();
         } else {
 
@@ -4492,6 +4494,7 @@ $pageDescription = "Secure and easy client-side password generator";
                 }
                 if (symbols == false && numbers == false && lowercase == false && uppercase == false) {
                     password = 'You must select at least one character set!';
+                    output.html(password);
                 } else {
                     for (var i = 0; i < passwordLength; i++) {
                         password += dataset.charAt(Math.floor(Math.random() * dataset.length));
@@ -4506,7 +4509,7 @@ $pageDescription = "Secure and easy client-side password generator";
         }
     }
 
-    passwordGenerator()
+    passwordGenerator();
 
 </script>
 <?php include('../_inc/footer.php'); ?>
