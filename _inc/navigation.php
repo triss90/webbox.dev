@@ -48,6 +48,7 @@
                 <div class="dropdown-menu" aria-labelledby="toolbox">
                     <a class="dropdown-item" href="../password/">Password Generator</a>
                     <a class="dropdown-item" href="../htpasswd/">.htpasswd Generator</a>
+                    <a class="dropdown-item" href="../persona/">Identity Generator</a>
                 </div>
             </li>
         </ul>

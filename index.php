@@ -131,6 +131,17 @@
 
         <div class="col-md-6">
             <div class="card border-dark">
+                <div class="card-header"><span class="badge badge-info">security</span></div>
+                <div class="card-body">
+                    <h4 class="card-title"><i class="fa fa-address-card-o" aria-hidden="true"></i> Identity Generator</h4>
+                    <p class="card-text">Generate a fully randomized identity, with name, sex, age and more.</p>
+                    <a href="/persona/" class="btn btn-outline-secondary">Create fake identity</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card border-dark">
                 <div class="card-header"><span class="badge badge-success">networking</span></div>
                 <div class="card-body">
                     <h4 class="card-title"><i class="fa fa-random" aria-hidden="true"></i> Port Scanner</h4>
