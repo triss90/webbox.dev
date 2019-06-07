@@ -1552,18 +1552,16 @@ function phoneNumber() {
 }
 
 // Generate random birthday
-function birtday($years) {
+function birthday($years) {
     $date = strtotime(date("Y").'-'.phoneNumber().'-'.phoneNumber().' -'.$years.' year');
     return date('Y-m-d', $date);
 }
-
-
 
 $first_name = randomFirstName();
 $last_name = randomLastName();
 $sex = randomSex();
 $age = (rand(18,75));
-$birthdayDate = birtday($age);
+$birthdayDate = birthday($age);
 $country = randomCountry($countries);
 $flag = randomCountryFlag($countries);
 
