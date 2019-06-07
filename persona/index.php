@@ -117,13 +117,20 @@ $pageDescription = "Generate a fully randomized identity, with name, sex, age an
 </style>
 
 <div class="container">
-    <button id="buttonSubmit" onClick="getPersona()" type="submit" class="btn btn-success btn pull-right mr-2 mt-3">Generate new Indetity</button>
-    <button id="buttonLoad" class="btn btn-success btn pull-right mr-2 mt-3" type="button" style="display:none;" disabled>
-        <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-        Loading...
-    </button>
-    <h1>Fake Identity Generator</h1>
-    <h5>Generate a fully randomized identity, with name, sex, age and more.</h5><br>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <h1>Fake Identity Generator</h1>
+            <h5>Generate a fully randomized identity, with name, sex, age and more.</h5><br></div>
+        <div class="col-xs-12 col-sm-6">
+            <button id="buttonSubmit" onClick="getPersona()" type="submit" class="btn btn-success btn pull-right mr-2 mt-3">Generate new Indetity</button>
+            <button id="buttonLoad" class="btn btn-success btn pull-right mr-2 mt-3" type="button" style="display:none;" disabled>
+                <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                Loading...
+            </button>
+        </div>
+    </div>
+
     <hr>
 
     <div class="row">
