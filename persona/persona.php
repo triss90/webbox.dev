@@ -1384,14 +1384,14 @@ if ($sex == 'Male') {
 }
 $middle_initial = $letter = chr(rand(65,90));
 $last_name = randomLastName();
-$age = (rand(18,75));
+$age = (rand(20,60));
 $birthdayDate = birthday($age);
 $country = randomCountry($countries);
 $flag = randomCountryFlag($countries);
 $email = strtolower($first_name) . strtolower($last_name) . strrev($age) . '@gmail.com';
 $bloodtype = randomBloodType();
-$height = (rand(160,210));
-$weight = (rand(55,130));
+$height = (rand(160,200));
+$weight = (rand(55,100));
 
 ?>
 
