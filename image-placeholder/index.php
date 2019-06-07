@@ -139,15 +139,25 @@ $pageDescription = "Generate image in any size to use as placeholder for your pr
                 </div>
             </div>
 
+
             <div class="col-12 col-sm-12 col-md-3 offset-md-1">
-                <button id="buttonSubmit" onClick="getPlaceholder()" type="submit" class="btn btn-success btn-block" style="margin-top: 2.2rem;">Generate image</button>
-                <button id="buttonLoad" class="btn btn-success btn-block" type="button" style="display:none;margin-top:2.2rem;" disabled>
+                <button id="buttonSubmit" onClick="getPlaceholder()" type="submit" class="btn btn-danger btn-block" style="margin-top: 2.2rem;">Generate image</button>
+                <button id="buttonLoad" class="btn btn-danger btn-block" type="button" style="display:none;margin-top:2.2rem;" disabled>
                     <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
                     Loading...
                 </button>
             </div>
+
         </div>
 
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" name="darkmode" id="darkmode">
+                    <label class="custom-control-label" for="darkmode">Darkmode</label>
+                </div>
+            </div>
+        </div>
 
     <br>
     <br>
@@ -194,7 +204,12 @@ function getPlaceholder() {
     var widthVal = $('#width').val();
     var heightVal = $('#height').val();
     var img = $('<img id="dynamic">');
-    img.attr('src', 'placeholder.php?width='+widthVal+'&height='+heightVal);
+    if($('#darkmode').is(":checked")) {
+        img.attr('src', 'placeholder.php?width='+widthVal+'&height='+heightVal+'&darkmode=1');
+    } else {
+        img.attr('src', 'placeholder.php?width='+widthVal+'&height='+heightVal);
+    }
+
     img.attr('alt', 'Image created by a PHP script');
     img.attr('id', 'placeholder');
     setTimeout(function(){

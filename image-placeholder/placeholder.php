@@ -1,6 +1,9 @@
 <?php
 $width = $_GET['width'];
 $height = $_GET['height'];
+
+
+
 $text = $width . ' x ' . $height;
 
 $textWidth = $width / 2;
@@ -13,8 +16,14 @@ $ImageText2Small = imagecreate($width, $height);
 $ImageText2Large = imagecreate($width, $height);
 $ImageFinal = imagecreate($width, $height);
 
-$backgroundColor = imagecolorallocate($ImageText2Small, 255,255,255);
-$textColor = imagecolorallocate($ImageText2Small, 0,0,0);
+if (isset($_GET['darkmode'])) {
+    $backgroundColor = imagecolorallocate($ImageText2Small, 51,51,51);
+    $textColor = imagecolorallocate($ImageText2Small, 204,204,204);
+} else {
+    $backgroundColor = imagecolorallocate($ImageText2Small, 204,204,204);
+    $textColor = imagecolorallocate($ImageText2Small, 51,51,51);
+}
+
 
 imagestring($ImageText2Small, 5, 1, 0, $text,  $textColor);
 imagecopyresampled($ImageText2Large, $ImageText2Small, $textX, $textY, 0, 0, $textWidth, $textHeight, 154, 20);
