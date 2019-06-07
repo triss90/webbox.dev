@@ -28,6 +28,7 @@
                 <div class="dropdown-menu" aria-labelledby="toolbox">
                     <a class="dropdown-item" href="../color-converter/">Color Converter</a>
                     <a class="dropdown-item" href="../image-compression/">Image Compression</a>
+                    <a class="dropdown-item" href="../image-placeholder/">Placeholder Images</a>
                 </div>
             </li>
 <!--            <li class="nav-item dropdown">-->

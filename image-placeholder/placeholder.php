@@ -1,0 +1,32 @@
+<?php
+$width = $_GET['width'];
+$height = $_GET['height'];
+$text = $width . ' x ' . $height;
+
+$textWidth = $width / 2;
+$textHeight = $textWidth / 4;
+
+$textX = ($width / 2) - ($textWidth / 2.5);
+$textY = ($height / 2) - ($textHeight / 1.5);
+
+$ImageText2Small = imagecreate($width, $height);
+$ImageText2Large = imagecreate($width, $height);
+$ImageFinal = imagecreate($width, $height);
+
+$backgroundColor = imagecolorallocate($ImageText2Small, 255,255,255);
+$textColor = imagecolorallocate($ImageText2Small, 0,0,0);
+
+imagestring($ImageText2Small, 5, 1, 0, $text,  $textColor);
+imagecopyresampled($ImageText2Large, $ImageText2Small, $textX, $textY, 0, 0, $textWidth, $textHeight, 154, 20);
+
+$ImageText2W = imagesx($ImageText2Large);
+$ImageText2H = imagesy($ImageText2Large);
+
+imagecopymerge($ImageFinal, $ImageText2Large, 20, 20, 0, 0, $ImageText2W, $ImageText2H, 100);
+
+header("Content-type: image/png");
+imagepng($ImageFinal);
+
+imagecolordeallocate($ImageText2, $textColor);
+imagedestroy($ImageText2);
+

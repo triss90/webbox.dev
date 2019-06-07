@@ -19,6 +19,17 @@
 	<div class="row">
 
         <div class="col-md-6">
+            <div class="card border-danger">
+                <div class="card-header"><span class="badge badge-light">sponsored</span></div>
+                <div class="card-body ktext-light">
+                    <h4 class="card-title"><img src="/assets/img/colordrop.png" style="display: inline-block; width: 32px;" alt=""> ColorDrop</h4>
+                    <p class="card-text">Thousands of curated colors, palettes for use in your products.</p>
+                    <a href="https://colordrop.io" target="_blank" class="btn btn-outline-secondary">Visit colordrop.io</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
             <div class="card border-dark">
                 <div class="card-header"><span class="badge badge-info">security</span></div>
                 <div class="card-body">
@@ -97,17 +108,6 @@
 <!--        </div>-->
 
         <div class="col-md-6">
-            <div class="card border-danger">
-                <div class="card-header"><span class="badge badge-light">sponsored</span></div>
-                <div class="card-body ktext-light">
-                    <h4 class="card-title"><img src="/assets/img/colordrop.png" style="display: inline-block; width: 32px;" alt=""> ColorDrop</h4>
-                    <p class="card-text">Thousands of curated colors, palettes for use in your products.</p>
-                    <a href="https://colordrop.io" target="_blank" class="btn btn-outline-secondary">Visit colordrop.io</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-6">
             <div class="card border-dark">
                 <div class="card-header"><span class="badge badge-success">networking</span></div>
                 <div class="card-body">
@@ -125,6 +125,17 @@
                     <h4 class="card-title"><i class="fa fa-crosshairs" aria-hidden="true"></i> HTTP Headers</h4>
                     <p class="card-text">Check HTTP Headers from URL.</p>
                     <a href="/http-headers/" class="btn btn-outline-secondary">Get Headers</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card border-dark">
+                <div class="card-header"><span class="badge badge-danger">graphic</span></div>
+                <div class="card-body">
+                    <h4 class="card-title"><i class="fa fa-paint-brush" aria-hidden="true"></i> Placeholder Image</h4>
+                    <p class="card-text">Quickly generate and download placeholder images for you project</p>
+                    <a href="/image-placeholder/" class="btn btn-outline-secondary">Generate image</a>
                 </div>
             </div>
         </div>
