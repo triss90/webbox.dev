@@ -1335,9 +1335,8 @@ function randomCountry($list) {
     $value = $list[$key];
     return $value;
 }
-function randomCountryFlag($list) {
-    $key = array_rand($list);
-    return strtolower($key);
+function randomCountryFlag($search, $list) {
+    return(array_search($search, $list));
 }
 
 // Generate random phone number
@@ -1357,6 +1356,7 @@ function phoneNumber() {
     return $numbers[rand(0, count($numbers) - 1)];
 }
 
+// Generate random bloo type
 function randomBloodType() {
     $numbers = array(
         'AB-',
@@ -1385,9 +1385,9 @@ if ($sex == 'Male') {
 $middle_initial = $letter = chr(rand(65,90));
 $last_name = randomLastName();
 $age = (rand(20,60));
-$birthdayDate = birthday($age);
 $country = randomCountry($countries);
-$flag = randomCountryFlag($countries);
+$flag = strtolower(randomCountryFlag($country, $countries));
+$birthdayDate = birthday($age);
 $email = strtolower($first_name) . strtolower($last_name) . strrev($age) . '@gmail.com';
 $bloodtype = randomBloodType();
 $height = (rand(160,200));
@@ -1463,7 +1463,10 @@ $person = json_decode($output, true);
         Zip Code<span class="text-success"><?php echo $faker->postcode; ?></span>
     </li>
     <li class="list-group-item d-flex justify-content-between align-items-center">
-        Country<span class="text-success"><?php print_r($country); ?> <img src="flags/<?php print_r($flag); ?>.gif" alt="Flag of <?php print_r($country); ?>" title="Flag of <?php print_r($country); ?>"></span>
+        Country<span class="text-success"><?php print_r($country); ?></span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        National Flag<span class="text-success"><img src="flags/<?php print_r($flag); ?>.gif" alt="Flag of <?php print_r($country); ?>" title="Flag of <?php print_r($country); ?>"></span>
     </li>
 
     <hr>
