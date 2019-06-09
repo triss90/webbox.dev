@@ -41,8 +41,7 @@ $pageDescription = "Generate .htpasswd username and password combinations.";
 
     <div class="row">
 
-        <div class="col">
-            <pre id="output" style="display: none"></pre>
+        <div class="col" id="output" style="display: none">
         </div>
 
     </div>
