@@ -2021,6 +2021,7 @@ function birthday($years) {
     return date('Y-m-d', $date);
 }
 
+// Generate Zodiac based on birthday
 function zodiac($birthdate) {
 
     $zodiac = '';
