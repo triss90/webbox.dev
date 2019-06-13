@@ -120,6 +120,17 @@
 
         <div class="col-md-6">
             <div class="card border-dark">
+                <div class="card-header"><span class="badge badge-info">security</span></div>
+                <div class="card-body">
+                    <h4 class="card-title"><i class="fa fa-life-ring" aria-hidden="true"></i> Leaked Passwords</h4>
+                    <p class="card-text">Check if password has been leaked by a known hack</p>
+                    <a href="/password/" class="btn btn-outline-secondary">Check Password</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card border-dark">
                 <div class="card-header"><span class="badge badge-success">networking</span></div>
                 <div class="card-body">
                     <h4 class="card-title"><i class="fa fa-crosshairs" aria-hidden="true"></i> HTTP Headers</h4>
