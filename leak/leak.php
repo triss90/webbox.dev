@@ -1,5 +1,4 @@
 <?php
-
 // Search for partial string in array
 function array_search_partial($arr, $keyword) {
     foreach($arr as $index => $string) {
@@ -19,23 +18,19 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $output = curl_exec($ch);
 curl_close($ch);
 
-$results = array_map("trim", explode(PHP_EOL, $output));
+$password = array_map("trim", explode(PHP_EOL, $output));
 
-
-
-$match =  array_search_partial($results, $hash_suffix);
+$match =  array_search_partial($password, $hash_suffix);
 
 if ($match != "") {
-    $leaked_password_hash = explode(':', $results[$match]);
+    $leaked_password_hash = explode(':', $password[$match]);
     echo "<h2 style='color:#D33682; font-size: 5rem;'>Password has been leaked!</h2>";
     echo "<h3 style='font-size: 3rem;'>This password has been seen <code style='color: #D33682;'>".$leaked_password_hash[1]."</code> times before.</h3>";
     echo "<br>";
     echo "<p style='font-size: 1.5rem;'>This password has previously appeared in a data breach and should never be used. If you've ever used it anywhere before, change it!</p>";
-
 } else {
     echo "<h2 style='color:#2AA198; font-size: 5rem;'>Good news!</h2>";
     echo "<br>";
     echo "<p style='font-size: 1.5rem;'>This password wasn't found among any of the leaked passwords. That doesn't necessarily mean it's a good password, merely that it's not indexed. If you're not already using a password manager, you should probably consider doing that.</p>";
-
 }
 
