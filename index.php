@@ -197,6 +197,17 @@
 
         <div class="col-md-6">
             <div class="card border-dark">
+                <div class="card-header"><span class="badge badge-info">security</span></div>
+                <div class="card-body">
+                    <h4 class="card-title"><i class="fa fa-user-secret" aria-hidden="true"></i> Encrypt / Descrypt message</h4>
+                    <p class="card-text">A free, fast, secure and serverless string encryption.</p>
+                    <a href="/hash/" class="btn btn-outline-secondary">Encrypt/Decrypt String</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card border-dark">
                 <div class="card-header"><span class="badge badge-primary">programming</span></div>
                 <div class="card-body">
                     <h4 class="card-title"><i class="fa fa-paragraph" aria-hidden="true"></i> Markdown Editor</h4>
