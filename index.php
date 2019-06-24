@@ -201,7 +201,7 @@
                 <div class="card-body">
                     <h4 class="card-title"><i class="fa fa-user-secret" aria-hidden="true"></i> Encrypt / Descrypt message</h4>
                     <p class="card-text">A free, fast, secure and serverless string encryption.</p>
-                    <a href="/hash/" class="btn btn-outline-secondary">Encrypt/Decrypt String</a>
+                    <a href="/encrypt-string/" class="btn btn-outline-secondary">Encrypt/Decrypt String</a>
                 </div>
             </div>
         </div>

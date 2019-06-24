@@ -21,11 +21,13 @@ $date->setTimezone(new DateTimeZone('Europe/Copenhagen'));
 	<?php
 	$domain = htmlspecialchars($_POST['domainName']);
 	$dns = dns_get_record($domain);
+	$cname_autodiscover = dns_get_record('autodiscover.'.$domain);
 	$repeat = $_POST['repeat'];
 	if ($repeat != "") {
 	    $repeat = "&repeat=1";
     }
 
+	// GET DNS
 	foreach($dns as $item) {
 		// Check if type is set
 		if (!isset($item['type'])) {
@@ -69,6 +71,50 @@ $date->setTimezone(new DateTimeZone('Europe/Copenhagen'));
 			</tr>
 		';
 	}
+
+    // Get Autodiscover CNAME
+    foreach($cname_autodiscover as $item) {
+        if (!isset($item['type'])) {
+            $cnameType = "N/A";
+        } else {
+            $cnameType = $item['type'];
+        }
+
+        // Check if value is set
+        if (isset($item['target'])) {
+            $cnameValue = $item['target'];
+        } elseif (isset($item['txt'])) {
+            $cnameValue = $item['txt'];
+        } elseif (isset($item['ip'])) {
+            $cnameValue = $item['ip'];
+        } else {
+            $cnameValue = "N/A";
+        }
+
+        // Check if ttl is set
+        if (!isset($item['ttl'])) {
+            $cnameTtl = "N/A";
+        } else {
+            $cnameTtl = $item['ttl'];
+        }
+
+        // Check if host is set
+        if (!isset($item['host'])) {
+            $cnameHost = "N/A";
+        } else {
+            $cnameHost = $item['host'];
+        }
+
+        echo '
+			<tr>
+				<td>@</th>
+				<td>'.$cnameType.'</th>
+				<td>'.$cnameTtl.'</td>
+				<td>'.$cnameValue.'</td>
+				<td class="time">'.$date->format('Y-m-d H:i:s').'</td>
+			</tr>
+		';
+    }
 	?>
 	</tbody>
 </table>
