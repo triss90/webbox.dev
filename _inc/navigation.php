@@ -51,7 +51,7 @@
                     <a class="dropdown-item" href="../htpasswd/">.htpasswd Generator</a>
                     <a class="dropdown-item" href="../persona/">Identity Generator</a>
                     <a class="dropdown-item" href="../leak/">Leaked Passwords</a>
-                    <a class="dropdown-item" href="../hash/">Encrypt Messages</a>
+                    <a class="dropdown-item" href="../encrypt-string/">Encrypt Messages</a>
                 </div>
             </li>
         </ul>
