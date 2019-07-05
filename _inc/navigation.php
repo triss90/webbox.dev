@@ -42,6 +42,7 @@
                 <div class="dropdown-menu" aria-labelledby="toolbox">
                     <a class="dropdown-item" href="../beautify/">Code Beautifier</a>
                     <a class="dropdown-item" href="../markdown-editor/">Markdown Editor</a>
+                    <a class="dropdown-item" href="../idn-converter/">IDN Converter</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
