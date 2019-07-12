@@ -17,7 +17,7 @@
 				<div class="col-12 col-sm-6 col-md-8">
 					<div class="form-group">
                         <label for="idn">Domain name / Email address:</label>
-						<input type="text" name="idn" id="idn" class="form-control" placeholder="täst.com" required>
+						<input type="text" name="idn" id="idn" class="form-control" placeholder="täst.com / xn--tst-qla.com" required>
 					</div>
 			    </div>
 
