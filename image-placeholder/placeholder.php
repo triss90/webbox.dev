@@ -9,8 +9,15 @@ $text = $width . ' x ' . $height;
 $textWidth = $width / 2;
 $textHeight = $textWidth / 4;
 
+if ($width <= 300) {
+    $textWidth = $width / 1;
+    $textHeight = $textWidth / 3;
+}
+
 $textX = ($width / 2) - ($textWidth / 2.5);
 $textY = ($height / 2) - ($textHeight / 1.5);
+
+
 
 $ImageText2Small = imagecreate($width, $height);
 $ImageText2Large = imagecreate($width, $height);
