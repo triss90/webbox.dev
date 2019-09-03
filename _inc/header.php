@@ -27,8 +27,8 @@
         <meta name="author" content="Tristan White">
 
         <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
+        <link id="favicon32" rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
+        <link id="favicon16" rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
         <link rel="manifest" href="../assets/img/site.webmanifest">
         <link rel="mask-icon" href="../assets/img/safari-pinned-tab.svg" color="#002b36">
         <link rel="shortcut icon" href="../assets/img/favicon.ico">

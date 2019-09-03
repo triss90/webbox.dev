@@ -64,6 +64,22 @@
     <?php include('../_inc/scripts.php'); ?>
 
 	<script>
+
+        function faviconLoad() {
+            var favicon16 = document.getElementById('favicon16'),
+                favicon32 = document.getElementById('favicon32'),
+                loaderImage = "../assets/img/loader.gif";
+            favicon16.setAttribute('type', 'image/gif');
+            favicon16.setAttribute('href', loaderImage);
+        }
+
+        function faviconNormal() {
+            var favicon16 = document.getElementById('favicon16'),
+                favicon32 = document.getElementById('favicon32'),
+                faviconImage16 = "../assets/img/favicon-16x16.png",
+                faviconImage32 = "../assets/img/favicon-32x32.png";
+        }
+
 		$(function () {
 			$('form').on('submit', function (e) {
 				e.preventDefault();
