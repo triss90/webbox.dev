@@ -4481,7 +4481,7 @@ $pageDescription = "Secure and easy client-side password generator";
                 }
 
                 if (symbols === true) {
-                    dataset += '![]{}()%&*$#^<>~@|';
+                    dataset += '!{}()%&*$#^<>~@|';
                 }
                 if (numbers === true) {
                     dataset += '0123456789';
@@ -4492,6 +4492,7 @@ $pageDescription = "Secure and easy client-side password generator";
                 if (uppercase === true) {
                     dataset += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
                 }
+
                 if (symbols == false && numbers == false && lowercase == false && uppercase == false) {
                     password = 'You must select at least one character set!';
                     output.html(password);
@@ -4499,13 +4500,37 @@ $pageDescription = "Secure and easy client-side password generator";
                     for (var i = 0; i < passwordLength; i++) {
                         password += dataset.charAt(Math.floor(Math.random() * dataset.length));
                     }
+
+                    var regex_symbols = /[^!{}()%&*$#^<>~@|]/g;
+                    var regex_numbers = /[^0-9]/g;
+                    var regex_lowercase = /[^a-z]/g;
+                    var regex_uppercase = /[^A-Z]/g;
+
+                    if (symbols === true && password.match(regex_symbols).length === 8) {
+                        passwordGenerator();
+                        throw new Error('updating complexity');
+                    }
+                    if (numbers === true && password.match(regex_numbers).length === 8) {
+                        passwordGenerator();
+                        throw new Error('updating complexity');
+                    }
+                    if (lowercase === true && password.match(regex_lowercase).length === 8) {
+                        passwordGenerator();
+                        throw new Error('updating complexity');
+                    }
+                    if (uppercase === true && password.match(regex_uppercase).length === 8) {
+                        passwordGenerator();
+                        throw new Error('updating complexity');
+                    }
+
                     output.html(password);
+
                 }
                 // Hide button loader
                 $('.card').show().fadeIn();
                 $('#buttonSubmit').show();
                 $('#buttonLoad').hide();
-            }, 700);
+            }, 250);
         }
     }
 
