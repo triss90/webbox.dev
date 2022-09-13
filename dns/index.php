@@ -1,105 +1,110 @@
 <?php
-    $pageName = "DNS Lookup";
-    $pageDescription = "Look up DNS records on any domain and monitor changes to records.";
-    $pageKeywords = "dns lookup, dns details, dns information";
-    $domain = htmlspecialchars($_GET["domain"]);
-    $repeat = htmlspecialchars($_GET["repeat"]);
+$title = "DNS Lookup";
+$description = "Look up DNS records on any domain and monitor changes to records.";
+$domain = htmlspecialchars($_GET["domain"]);
 ?>
 
-<?php include('../_inc/header.php'); ?>
+<?php include_once("../_inc/header.php"); ?>
 
-<?php include('../_inc/navigation.php'); ?>
+<style>
+	.btn.block {
+		padding: .90rem 0;
+	}
+	.badge {
+		color: var(--color-pink-1);
+	}
+</style>
 
-  	<div class="container">
-  		<h1>DNS Lookup</h1>
-        <h5>Look up DNS records on any domain and monitor changes to records.</h5><br>
-        <code>https://webbox.dev/dns/?domain=<span class="badge badge-success">example.com</span>&repeat=<span class="badge badge-success">1</code>
-        <br><br>
-        <?php
-//        $host = "emilywhite.dk";
-//        $ns = "8.8.8.8"; // Google
-////        $ns = "1.1.1.1"; // Cloudflare
-////        $ns = "194.239.134.83"; // TDC
-//        exec("host -a $host $ns 2>&1", $lookupOutput);
-//        echo "<pre>";
-//        var_dump(array_reverse($lookupOutput));
-//        echo "</pre>";
-        ?>
-
+<div class="wrapper" id="dns">
+	
+	<nav class="navigation"><?php include_once("../_inc/nav.php"); ?></nav>
+	
+	<main class="content">
+		
 		<form id="dnsTest" action="getdns.php" method="post" accept-charset="utf-8">
-	  		<div class="row">
-
-				<div class="col-12 col-sm-6 col-md-8">
-					<div class="form-group">
-                        <label for="domainName">Domain name:</label>
-                        <input type="text" pattern="^([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}$" name="domainName" id="domainName" class="form-control my-1" placeholder="example.com" value="<?php echo $domain; ?>" required>
+			<section class="content_block">
+				<div class="row">
+					<div class="tiny">
+						<h1 class="headline center">DNS Lookup</h1>
+						<h2 class="small center">Look up DNS records on any domain and monitor changes to records.</h2>
+						<hr>
+						<code>https://webbox.dev/dns/?domain=<span class="badge badge-success"></span></code>
+						<br><br>
 					</div>
-
-					<div class="custom-control custom-checkbox">
-						<input type="checkbox" class="custom-control-input" name="repeat" id="repeat" <?php if($repeat == 1) {echo "checked"; } ?>>
-						<label class="custom-control-label" for="repeat">Refresh every 5 seconds</label>
+				</div>
+				<div class="row">
+					<div class="tiny-12 small-8 medium-9 large-10">
+						<label for="domainName">Domain name:</label>
+						<input type="text" pattern="^([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}$" name="domainName" id="domainName" class="form-control my-1" placeholder="example.com" value="<?php echo $domain; ?>" required>
 					</div>
-			    </div>
-
-			    <div class="col-12 col-sm-6 col-md-4">
-					<button id="buttonSubmit" type="submit" class="btn btn-success btn-block" style="margin-top: 2.2rem;">Look Up DNS</button>
-
-					<button id="buttonLoad" class="btn btn-success btn-block" type="button" style="display:none;margin-top:2.2rem;" disabled>
-						<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-						Loading...
-					</button>
-			    </div>
-			</div>
-
+					<div class="tiny-12 small-4 medium-3 large-2">
+						<button id="buttonSubmit" type="submit" class="btn block" style="margin-top: 1.8rem;">Look Up DNS</button>
+						<button id="buttonLoad" class="btn block" type="button" style="display:none;margin-top:1.8rem;" disabled>
+							<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+							Loading...
+						</button>
+					</div>
+				</div>
+			</section>
 		</form>
-		<br>
-		<div class="row">
-			<div class="col">
-				<div id="output"></div>
-			</div>
-		</div>
+		
+		<section class="content_block" id="output" style="display: none;"></section>
+		
+	</main>
+	
+</div>
 
-  	</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
 
-    <?php include('../_inc/scripts.php'); ?>
+<script>
+const domainOutput = document.querySelector(".badge");
+const domainInput = document.querySelector("#domainName");
+domainInput.addEventListener('input', function() {
+	domainOutput.innerHTML = domainInput.value;
+});
 
-	<script>
-		$(function () {
-			$('form').on('submit', function (e) {
-				e.preventDefault();
-				if ($('#repeat').is(':checked')) {
-					getDNS();
-					setInterval(getDNS, 5000);
-				} else {
-					getDNS();
-				}
-				function getDNS() {
-					$('#buttonSubmit').hide();
-					$('#buttonLoad').show();
-					setTimeout(function(){
-						$.ajax({
-							type: 'post',
-							url: 'getdns.php',
-							data: $('#dnsTest').serialize(),
-							success: function(response) {
-								$('#buttonLoad').hide();
-								$('#buttonSubmit').show();
-								$('#output').html(response);
-							}
-						});
-					}, 1000);
-				}
-			});
-		});
 
-		<?php if($domain != "") { ?>
-        $(document).ready(function(){
-            $("#dnsTest").submit();
-        });
-        <?php } ?>
+$(function () {
+	$('form').on('submit', function (e) {
+		e.preventDefault();
+		if ($('#repeat').is(':checked')) {
+			getDNS();
+			setInterval(getDNS, 5000);
+		} else {
+			getDNS();
+		}
+		function getDNS() {
+			$('#buttonSubmit').hide();
+			$('#buttonLoad').show();
+			setTimeout(function(){
+				$.ajax({
+					type: 'post',
+					url: '/dns/getdns.php',
+					data: $('#dnsTest').serialize(),
+					success: function(response) {
+						console.log(response);
+						$('#buttonLoad').hide();
+						$('#buttonSubmit').show();
+						$('#output').html(response);
+						$('#output').show();
+					}
+				});
+			}, 1000);
+		}
+	});
+});
 
-    </script>
+<?php if($domain != "") { ?>
+$(document).ready(function(){
+	domainOutput.innerHTML = "<? echo $domain; ?>";
+	$("#dnsTest").submit();
+});
+<?php } ?>
+</script>
 
-<?php include('../_inc/footer.php'); ?>
+<?php include_once("../_inc/footer.php"); ?>
+
+
+
 
 

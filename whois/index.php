@@ -1,78 +1,78 @@
 <?php
-    $pageName = "Whois Lookup";
-    $pageDescription = "Check domain availability and contact information with a simply whois lookup.";
-    $pageKeywords = "whois,whois lookup ,domain whois ,whois search,whois domain ,domain names ,domain names search ,domain name registration ,domain names availability,whois database ,who is domain ,who owns domain ,who is domain name,who owns a domain name,who owns a domain,who is search,whois domain lookup ,whois domain name,whois.net,whois.org";
+$title = "Whois Lookup";
+$description = "Check domain availability and contact information with a simple whois lookup.";
 ?>
-<?php include('../_inc/header.php'); ?>
 
-<?php include('../_inc/navigation.php'); ?>
+<?php include_once("../_inc/header.php"); ?>
 
-  	<div class="container">
-  		<h1>Whois Lookup</h1>
-        <h5>Check domain availability and contact information with a simply whois lookup.</h5><br>
-
+<div class="wrapper" id="whois">
+	
+	<nav class="navigation"><?php include_once("../_inc/nav.php"); ?></nav>
+	
+	<main class="content">
+		
 		<form id="whoisTest" action="whoislookup.php" method="post" accept-charset="utf-8">
-	  		<div class="row">
-
-				<div class="col-12 col-sm-6 col-md-8">
-					<div class="form-group">
-                        <label for="domainName">Domain name:</label>
+			<section class="content_block">
+				<div class="row">
+					<div class="tiny">
+						<h1 class="headline center">Whois Lookup</h1>
+						<h2 class="small center">Check domain availability and contact information with a simple whois lookup.</h2>
+						<hr>
+					</div>
+				</div>
+				<div class="row">
+					<div class="tiny-12 small-8 medium-9 large-10">
+						<label for="domainName">Domain name:</label>
 						<input type="text" pattern="^([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}$" name="domainName" id="domainName" class="form-control" placeholder="example.com" required>
 					</div>
-			    </div>
-
-			    <div class="col-12 col-sm-6 col-md-4">
-					<button id="buttonSubmit" type="submit" class="btn btn-success btn-block" style="margin-top: 2rem;">Check domain availability</button>
-
-					<button id="buttonLoad" class="btn btn-success btn-block" type="button" style="display:none;margin-top: 2rem;" disabled>
-						<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-						Loading...
-					</button>
-			    </div>
-			</div>
+					<div class="tiny-12 small-4 medium-3 large-2">
+						<button id="buttonSubmit" type="submit" class="btn block" style="margin-top: 1.8rem;">Look Up Domain</button>
+						<button id="buttonLoad" class="btn block" type="button" style="display:none;margin-top:1.8rem;" disabled>
+							<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+							Loading...
+						</button>
+					</div>
+				</div>
+			</section>
 		</form>
-		<br>
-		<div class="row">
-			<div class="col">
-                <div id="output-wrapper">
-                    <span class="circle c-1"></span>
-                    <span class="circle c-2"></span>
-                    <span class="circle c-3"></span>
-                    <pre><code class="Properties" id="output"></code></pre>
-                </div>
-			</div>
-		</div>
+		
+		<section class="content_block" id="output" style="display: none;"></section>
+		
+		<?php include('../_inc/ad.php'); ?>
+		
+	</main>
+	
+</div>
 
-  	</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
 
-    <?php include('../_inc/scripts.php'); ?>
+<script>
+	$(function () {
+		$('form').on('submit', function (e) {
+			e.preventDefault();
+			$('#buttonSubmit').hide();
+			$('#buttonLoad').show();
+			setTimeout(function(){
+				$.ajax({
+					type: 'post',
+					url: '/whois/whoislookup.php',
+					data: $('#whoisTest').serialize(),
+					success: function(response) {
+						$('#buttonLoad').hide();
+						$('#buttonSubmit').show();
+						$('#output').show();
+						$('#output').html(response);
+					}
+				});
+			}, 1000);
 
-	<script>
-		$(function () {
-			$('form').on('submit', function (e) {
-				e.preventDefault();
-                $('#buttonSubmit').hide();
-                $('#buttonLoad').show();
-                setTimeout(function(){
-                    $.ajax({
-                        type: 'post',
-                        url: 'whoislookup.php',
-                        data: $('#whoisTest').serialize(),
-                        success: function(response) {
-                            $('#buttonLoad').hide();
-                            $('#buttonSubmit').show();
-                            $('#output-wrapper').addClass('active');
-                            $('#output').html(response);
-                            hljs.initHighlighting.called = false;
-                            hljs.initHighlighting();
-                        }
-                    });
-                }, 1000);
-
-			});
 		});
-    </script>
+	});
+</script>
 
-<?php include('../_inc/footer.php'); ?>
+<?php include_once("../_inc/footer.php"); ?>
+
+
+
 
 

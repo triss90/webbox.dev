@@ -1,75 +1,88 @@
 <?php
-    $pageName = "Crontab Generator";
-    $pageDescription = "The quick and simple editor for cron schedule expressions.";
+$title = "Port Scanner";
+$description = "Scan IP or domain for open ports";
 ?>
-<?php include('../_inc/header.php'); ?>
-<?php include('../_inc/navigation.php'); ?>
 
-  	<div class="container">
-  		<h1>Port Scanner</h1>
-        <h5>Check if a port is online or not. Enter a hostname or an IP address and comma separated ports to check those ports status.</h5><br>
-        <!-- https://gist.github.com/akalongman/b50bc11a9303adb6f2db -->
+<?php include_once("../_inc/header.php"); ?>
 
-        <form id="portScanner" action="portScanner.php" method="post" accept-charset="utf-8">
-            <div class="row">
+<div class="wrapper" id="portscanner">
+	
+	<nav class="navigation"><?php include_once("../_inc/nav.php"); ?></nav>
+	
+	<main class="content">
+		
+		<section class="content_block">
+			<div class="row">
+				<div class="tiny">
+					<h1 class="headline center">Port Scanner</h1>
+					<h2 class="small center">Scan IP or domain for open ports</h2>
+					<hr>
+				</div>
+			</div>
+			<form method="post" id="portScanner">
+				<div class="row">
+					<div class="tiny-12 small-6">
+						Domain/IP: 
+						<input type="text" name="domain" id="domain" required/> 	
+					</div>
+					<div class="tiny-12 small-4">
+						Port(s):
+						<input type="text" name="ports" id="ports" placeholder="21, 22, 23, 25, 53, 80, 443, 110, 1433, 3306" /> 
+					</div>
+					<div class="tiny-12 small-2">
+						<button id="buttonSubmit" type="submit" class="block" style="margin-top: 1.75rem;padding:0.9rem 0;">Scan</button>
+						<button id="buttonLoad" class="block" type="button" style="display:none;margin-top: 2rem;" disabled="">
+							<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+							Loading...
+						</button>
+					</div>
+				</div>
+			</form>
+		</section>
+		
+		<section class="content_block" id="output-wrapper" style="display: none;">
+			<div class="row">
+				<div class="tiny">
+					<pre id="output"></pre>
+				</div>
+			</div>
+		</section>
+		
+		<?php include('../_inc/ad.php'); ?>
+		
+	</main>
+</div>
 
-                <div class="col-12 col-sm-6 col-md-7">
-                    <div class="form-group">
-                        <label for="domainName">Hostname / IP Address</label>
-                        <input type="text" name="host" id="host" class="form-control my-1" placeholder="example.com or 12.234.567.89" value="" required>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="form-group">
-                        <label for="domainName">Ports</label>
-                        <input type="text" name="ports" id="ports" class="form-control my-1" placeholder="80, 443, 8080" value="" required>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-2">
-                    <button id="buttonSubmit" type="submit" class="btn btn-success btn-block" style="margin-top: 2.2rem;">Scan Ports</button>
-                    <button id="buttonLoad" class="btn btn-success btn-block" type="button" style="display:none;margin-top:2.2rem;" disabled>
-                        <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-                        Loading...
-                    </button>
-                </div>
-            </div>
-        </form>
-
-        <div class="row">
-
-            <div class="col">
-                <div id="output"></div>
-            </div>
-
-        </div>
-
-  	</div>
-
-<?php include('../_inc/scripts.php'); ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
 <script>
-    $(function () {
-        $('form').on('submit', function (e) {
-            e.preventDefault();
-            $('#buttonSubmit').hide();
-            $('#buttonLoad').show();
-            setTimeout(function(){
-                $.ajax({
-                    type: 'post',
-                    url: 'portScanner.php',
-                    data: $('#portScanner').serialize(),
-                    success: function(response) {
-                        $('#buttonLoad').hide();
-                        $('#buttonSubmit').show();
-                        $('#output').html(response);
-                    }
-                });
-            }, 1000);
+	
+	$(function () {
+		$('form').on('submit', function (e) {
+			e.preventDefault();
+			$('#buttonSubmit').hide();
+			$('#buttonLoad').show();
+			setTimeout(function(){
+				$.ajax({
+					type: 'post',
+					url: '/port-scanner/portscanner.php',
+					data: $('#portScanner').serialize(),
+					success: function(response) {
+						$('#buttonLoad').hide();
+						$('#buttonSubmit').show();
+						$('#output-wrapper').css("display", "block");
+						$('#output').html(response);
+					}
+				});
+			}, 1000);
+		});
+	});
 
-        });
-    });
 </script>
-<?php include('../_inc/footer.php'); ?>
+
+
+<?php include_once("../_inc/footer.php"); ?>
+
+
+
 
 
