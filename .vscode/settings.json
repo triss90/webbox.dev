@@ -1,3 +1,7 @@
 {
-    "editor.fontSize": 13
+    "editor.fontSize": 13,
+    "workbench.colorTheme": "Cobalt2",
+    "workbench.iconTheme": "file-icons",
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false
 }
