@@ -263,8 +263,8 @@ $description = "Secure and easy client-side password generator";
 				<li>Reset local admin passwords every 180 days. This can be done with the free Netwrix Bulk Password Reset tool.</li>
 				<li>Reset service accounts passwords once a year during maintenance.</li>
 				<li>For domain admin accounts, use strong passphrases with a minimum of 15 characters.</li>
-				<li>Track all password changes by enabling password audit policies. This can be done with Netwrix Auditor for Active Directory.</li>
-				<li>Create email notifications for password expiration. This can be done with the free Netwrix Password Expiration Notifier tool.</li>
+				<li>Track all password changes by enabling password audit policies.</li>
+				<li>Create email notifications for password expiration.</li>
 			</ul>
 							
 		</section>
