@@ -14,15 +14,14 @@
 | Port 3306 = MySQL     |
 | -----------------------
 */ 
-
 $ports = htmlspecialchars($_POST['ports']);
+$domain = htmlspecialchars($_POST['domain']);
+
 if (empty($ports)) {
 	$ports = array(21, 22, 23, 25, 53, 80, 443, 110, 1433, 3306);
 } else {
 	$ports = array_map('intval', explode(',', $ports));
 }
-$domain = htmlspecialchars($_POST['domain']);
-
 foreach($ports as $port) {
 	if($pf = @fsockopen($domain, $port, $err, $err_string, 1)) {
 		$results[$port] = true;
@@ -41,4 +40,4 @@ foreach($results as $port=>$val)    {
 	else {
 		echo "<span style=\"color:var(--color-red-1)\">Inaccessible</span><br/>";
 	}
-}
+}	
