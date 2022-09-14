@@ -2157,7 +2157,7 @@ $person = json_decode($output, true);
         Country<span class="text-success"><?php print_r($country); ?></span>
     </li>
     <li class="list-group-item d-flex justify-content-between align-items-center">
-        National Flag<span class="text-success"><img style="display:inline-block" src="identity-generator/flags/<?php print_r($flag); ?>.gif" alt="Flag of <?php print_r($country); ?>" title="Flag of <?php print_r($country); ?>"></span>
+        National Flag<span class="text-success"><img style="display:inline-block" src="/identity-generator/flags/<?php print_r($flag); ?>.gif" alt="Flag of <?php print_r($country); ?>" title="Flag of <?php print_r($country); ?>"></span>
     </li>
 
     <hr>

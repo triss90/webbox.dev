@@ -11,3 +11,4 @@ gen### CodeKit template
 config.codekit
 /min
 
+.vscode/sftp.json

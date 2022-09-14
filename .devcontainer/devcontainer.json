@@ -29,7 +29,10 @@
 				"mrmlnc.vscode-apache",
 				"cweijan.vscode-database-client2",
 				"Natizyskunk.sftp",
-				"DavidAnson.vscode-markdownlint"
+				"DavidAnson.vscode-markdownlint",
+				"PKief.material-icon-theme",
+				"naumovs.color-highlight",
+				"pranaygp.vscode-css-peek"
 			]
 		}
 	},
@@ -38,7 +41,7 @@
 	"forwardPorts": [8080],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "sudo chmod a+x \"$(pwd)\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)\" /var/www/html",
+	"postCreateCommand": "sudo chmod a+x \"$(pwd)\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)\" /var/www/html && sudo apache2ctl start && sudo apt install sqlite3",
 
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode"
