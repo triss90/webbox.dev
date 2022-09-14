@@ -61,11 +61,8 @@ $location = json_decode($location);
 				</div>
 			</section>
 		</form>
-		
 		<section class="content_block" id="ipTitle" style="display: none;"></section>
-		
 		<section class="content_block" id="ip-info" style="display: none;"></section>
-		
 		<section class="content_block" id="map" style="display: none;height:500px"></section>
 		
 		<?php include('../_inc/ad.php'); ?>
