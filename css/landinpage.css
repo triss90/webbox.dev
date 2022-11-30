@@ -1,0 +1,33 @@
+.landingpage {
+  min-height: 100vh;
+  background: var(--color-white-1);
+}
+.landingpage header {
+  padding: 75px 0 0 0;
+}
+.landingpage header a.logo {
+  font-family: "Dancing Script", cursive;
+  text-decoration: none;
+  background-image: linear-gradient(to right, var(--color-purple-1), var(--color-blue-1), var(--color-blue-2));
+}
+.landingpage header a.logo h1 {
+  font-size: 6rem;
+  line-height: 1;
+}
+.landingpage header hr {
+  background: var(--color-white-4);
+  margin-bottom: 1rem;
+}
+footer#footer {
+  text-align: center;
+  padding: 3rem 0;
+  background: var(--color-white-1);
+}
+footer#footer p {
+  color: var(--color-purple-2);
+}
+footer#footer p a {
+  color: var(--color-purple-1-2);
+}
+
+/*# sourceMappingURL=landinpage.css.map */

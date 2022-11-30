@@ -13,5 +13,4 @@ gen### CodeKit template
 # General CodeKit files to ignore
 config.codekit
 /min
-
-.vscode/sftp.json
+.vscode/*

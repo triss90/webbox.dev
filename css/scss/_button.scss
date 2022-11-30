@@ -1,0 +1,73 @@
+button, .btn {
+	border: 0;
+	background: var(--color-purple-3);
+	padding: 0.5rem 1rem;
+	color: var(--color-purple-1);
+	border-radius: 1rem;
+	margin: 0 0 1rem 0;
+	cursor: pointer;
+	transform: scale(1);
+	transition: all 90ms ease-in-out;
+	&:hover {
+		transform: scale(1.03);
+		box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+	}
+	&:active {
+		transform: scale(1.015);
+		box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+	}
+	&.block {
+		display: block;
+		width: 100%;
+		font-size: 1rem;
+		padding: 0.75rem 0;
+		position: relative;
+		top: -0.35rem;
+	}
+	&.center {
+		margin: 0 auto;
+	}
+	&.tiny {
+		padding: 0.25rem 0.75rem;
+		font-size: 0.85rem;
+	}
+	&.filter {
+		padding: 0.25rem 0.75rem;
+		font-size: 0.85rem;
+		background: var(--color-purple-4);		
+		color: var(--color-purple-1-2);
+		&.active {
+			background: var(--color-purple-2);
+			color: var(--color-purple-1);
+		}
+	}
+	&.github {
+		display: inline-block;
+		background: var(--color-white-1);
+		border: 2px solid var(--color-white-3);
+		color: var(--color-white-4);
+		text-align: left;
+		margin-top: 1.5rem;
+		&.center {
+			margin: 3rem 1rem;
+			display: block;
+		}
+		.github-inner {
+			display: flex;
+			width: auto;
+			.text {
+				font-size: 0.85rem;
+				.title {
+					font-size: 0.9rem;
+					font-weight: bold;
+				}
+			}
+			.logo {
+				svg {
+					margin: 0.35rem 0.75rem 0 0;
+					fill: var(--color-white-4);
+				}
+			}
+		}
+	}
+}
