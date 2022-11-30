@@ -1,0 +1,17 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+.nova
+.htaccess
+run.sh
+*.iml
+out
+gen### CodeKit template
+# General CodeKit files to ignore
+config.codekit
+/min
+
+.vscode/sftp.json
