@@ -97,7 +97,6 @@ nav.navigation {
 					padding: 0;
 					margin-bottom: 0.5rem;
 					&.external {
-						//background: red;
 						position: relative;
 						&:after {
 							position: absolute;
@@ -106,6 +105,9 @@ nav.navigation {
 							width: 1rem;
 							right: 1rem;
 							top: 1.3rem;
+							@media(max-width: 1024px) {
+								display: none;
+							}
 						}
 					}
 					@media(max-width: 1024px) {

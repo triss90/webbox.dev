@@ -307,6 +307,11 @@ nav.navigation .navigation_inner .nav-items ul li.external:after {
   top: 1.3rem;
 }
 @media (max-width: 1024px) {
+  nav.navigation .navigation_inner .nav-items ul li.external:after {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
   nav.navigation .navigation_inner .nav-items ul li {
     margin-bottom: 0.25rem;
   }
