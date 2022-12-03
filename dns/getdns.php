@@ -21,7 +21,7 @@ $date->setTimezone(new DateTimeZone('Europe/Copenhagen'));
 	<?php
 	$domain = htmlspecialchars($_POST['domainName']);
 	//$domain = 'servicepoint.dk';
-	$dns = dns_get_record($domain,DNS_SOA|DNS_NS|DNS_A|DNS_TXT|DNS_MX|DNS_SPF|DNS_SRV);
+	$dns = dns_get_record($domain,DNS_SOA|DNS_NS|DNS_A|DNS_TXT|DNS_MX|DNS_SRV);
 	
 	// scan følgende for A, TXT, CNAME, SRV etc.
 	$commonNames = array();
