@@ -1,7 +1,10 @@
 <?php
 $title = "DNS Lookup";
 $description = "Look up DNS records on any domain and monitor changes to records.";
-$domain = htmlspecialchars($_GET["domain"]);
+echo $domain = "";
+if (isset($_GET["domain"])) {
+	$domain = htmlspecialchars($_GET["domain"]);
+}
 ?>
 
 <?php include_once("../_inc/header.php"); ?>
@@ -103,8 +106,3 @@ $(document).ready(function(){
 </script>
 
 <?php include_once("../_inc/footer.php"); ?>
-
-
-
-
-
