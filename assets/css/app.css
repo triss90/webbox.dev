@@ -206,10 +206,9 @@ body {
 
 nav.navigation {
   grid-area: navigation;
-  max-height: 100vh;
-  height: calc(100vh - 1.3rem);
+  max-height: 100%;
+  height: calc(100% - 1.3rem);
   margin: 0.65rem 0 0.65rem 0.65rem;
-  overflow: hidden;
 }
 @media (max-width: 1024px) {
   nav.navigation {
@@ -271,8 +270,9 @@ nav.navigation .navigation_inner {
   background: var(--color-white-1);
   border: 1px solid var(--color-white-3);
   border-radius: 1rem;
+  overflow: hidden;
   overflow-y: scroll;
-  height: 80vh;
+  height: 100%;
   position: relative;
 }
 @media (max-width: 1024px) {
