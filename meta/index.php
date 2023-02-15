@@ -46,7 +46,7 @@ $description = "Generate correct meta tags to uptimize SEO";
 				
 				<div class="row">
 					<div class="tiny-12 medium-6">
-						<label for="site-description">Site description (Characters available: <span id="description-char">120</span>)</label>
+						<label for="site-description">Site description (Characters available: <span id="description-char">150</span>)</label>
 						<textarea name="site-description" id="site-description" cols="20" rows="4" placeholder="Description must be no more than 150 characters"></textarea>
 					</div>
 					<div class="tiny-12 medium-6">
@@ -303,12 +303,12 @@ $description = "Generate correct meta tags to uptimize SEO";
 	
 	siteDescription.addEventListener('input', (e) => {
 		let descriptionCurrent = siteDescription.value.length+1;
-		charDescription.innerHTML = 120-(e.target.value.length);
-		if (descriptionCurrent <= 99) {
+		charDescription.innerHTML = 150-(e.target.value.length);
+		if (descriptionCurrent <= 129) {
 			charDescription.style.color = 'var(--color-green-3)';
-		} else if (descriptionCurrent <= 120) {
+		} else if (descriptionCurrent <= 150) {
 			charDescription.style.color = 'var(--color-yellow-1)';
-		} else if (descriptionCurrent > 120) {
+		} else if (descriptionCurrent > 150) {
 			charDescription.style.color = 'var(--color-red-1)';
 		}
 	});
