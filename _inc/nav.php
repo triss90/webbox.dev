@@ -14,6 +14,7 @@
 			<li class="item"><a href="/gradient" class="gradient"><img src="/assets/img/gradient-editor.svg" alt="Gradient icon"> <span>Gradient Editor</span></a></li>
 			<li class="item"><a href="/whois" class="whois"><img src="/assets/img/whois.svg" alt="DNS lookup icon"> <span>Whois Lookup</span></a></li>
 			<li class="item"><a href="/lorem-ipsum" class="lorem-ipsum"><img src="/assets/img/lorem.svg" alt="lorem ipsum text icon"> <span>Lorem Ipsum Generator</span></a></li> 
+			<li class="item"><a href="/meta" class="meta"><img src="/assets/img/meta.svg" alt="meta data icon"> <span>Meta Data Generator</span></a></li> 
 			<li class="item"><a href="/smtp" class="smtp"><img src="/assets/img/smtp.svg" alt="SMTP test icon"> <span>SMTP Test</span></a></li>
 			<li class="item"><a href="/dns" class="dns"><img src="/assets/img/dns.svg" alt="DNS lookup icon"> <span>DNS Lookup</span></a></li>
 			<li class="item external"><a href="https://scutum.pw" target="_blank" class="scutum"><img src="/assets/img/encryption.svg" alt="encryption icon"> <span>Text Encryption</span></a></li>

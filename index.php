@@ -179,6 +179,18 @@
 					</a>
 				</div>
 				
+				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="content">
+					<a href="/meta" class="card">
+						<div class="card-header">
+							<img src="/assets/img/meta.svg" alt="Meta data generator">
+						</div>
+						<div class="card-body">
+							<h2>Meta Data Generator</h2>
+							<p>Generate correct meta tags to uptimize SEO.</p>
+						</div>
+					</a>
+				</div>
+				
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="networking">
 					<a href="/whois" class="card">
 						<div class="card-header">

@@ -370,6 +370,7 @@ nav.navigation .navigation_inner .nav-items ul li a img {
 #morse .morse,
 #device-info .device-info,
 #ssh .ssh,
+#meta .meta,
 #portscanner .portscanner {
   font-weight: 700;
   color: var(--color-black-2);
@@ -396,6 +397,7 @@ nav.navigation .navigation_inner .nav-items ul li a img {
 #morse .morse,
 #device-info .device-info,
 #ssh .ssh,
+#meta .meta,
 #portscanner .portscanner {
     background: var(--color-purple-3);
   }
