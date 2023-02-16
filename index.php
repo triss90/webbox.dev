@@ -400,7 +400,7 @@
 					</a>
 				</div>
 				
-				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="server">
+				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="design">
 					<a href="/placeholder" class="card">
 						<div class="card-header">
 							<img src="/assets/img/placeholder.svg" alt="placeholder icon">
