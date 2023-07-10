@@ -1,5 +1,5 @@
 <?php
-include_once("punycode.class.php");
+require("punycode.php");
 
 $idn = htmlspecialchars($_POST['idn']);
 
