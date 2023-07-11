@@ -321,7 +321,7 @@ $description = "Generate Cron jobs easily with a visual generator";
 	</main>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" crossorigin="anonymous"></script>
 <script>
 
 const selectMinutesElement = document.querySelector('#selectMinutes');
@@ -366,7 +366,6 @@ $(function () {
 					$('#buttonSubmit').show();
 					$('#output-wrapper').css("display", "block");
 					$('#output').html(response);
-					console.log(response);
 				}
 			});
 		}, 500);

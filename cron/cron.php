@@ -1,17 +1,66 @@
 <?php
+$minute = "";
+$hour = "";
+$day = "";
+$month = "";
+$weekday = "";
+$command = "";
 
-$minutes_post = $_POST['minutes'];
-$hours_post =  $_POST['hours'];
-$days_post = $_POST['days'];
-$months_post = $_POST['months'];
-$weekdays_post = $_POST['weekdays'];
-$command = $_POST['command'];
-
-$minutes_post_custom = $_POST['selectMinutes'];
-$hours_post_custom = $_POST['selectHours'];
-$days_post_custom = $_POST['selectDays'];
-$months_post_custom = $_POST['selectMonths'];
-$weekdays_post_custom = $_POST['selectWeekdays'];
+if (isset($_POST['minutes'])) {
+	$minutes_post = $_POST['minutes'];
+} else {
+	$minutes_post = "";
+}
+if (isset($_POST['hours'])) {
+	$hours_post =  $_POST['hours'];
+} else {
+	$hours_post = "";
+}
+if (isset($_POST['days'])) {
+	$days_post = $_POST['days'];
+} else {
+	$days_post = "";
+}
+if (isset($_POST['months'])) {
+	$months_post = $_POST['months'];
+} else {
+	$months_post = "";
+}
+if (isset($_POST['weekdays'])) {
+	$weekdays_post = $_POST['weekdays'];
+} else {
+	$weekdays_post = "";
+}
+if (isset($_POST['command'])) {
+	$command = $_POST['command'];
+} else {
+	$command = "";
+}
+if (isset($_POST['selectMinutes'])) {
+	$minutes_post_custom = $_POST['selectMinutes'];
+} else {
+	$minutes_post_custom = "";
+}
+if (isset($_POST['selectHours'])) {
+	$hours_post_custom = $_POST['selectHours'];
+} else {
+	$hours_post_custom = "";
+}
+if (isset($_POST['selectDays'])) {
+	$days_post_custom = $_POST['selectDays'];
+} else {
+	$days_post_custom = "";
+}
+if (isset($_POST['selectMonths'])) {
+	$months_post_custom = $_POST['selectMonths'];
+} else {
+	$months_post_custom = "";
+}
+if (isset($_POST['selectWeekdays'])) {
+	$weekdays_post_custom = $_POST['selectWeekdays'];
+} else {
+	$weekdays_post_custom = "";
+}
 
 
 
@@ -32,6 +81,8 @@ if ($minutes_post == "every-minute") {
 		$minute .= $minute_value.",";	 
 	}
 	$minute = rtrim($minute, ',');
+} else {
+	$minute = "";
 }
 
 
@@ -50,6 +101,8 @@ if ($hours_post == "every-hour") {
 		$hour .= $hour_value.",";	 
 	}
 	$hour = rtrim($hour, ',');
+} else {
+	$hour = "";
 }
 
 
@@ -70,6 +123,8 @@ if ($days_post == "every-day") {
 		$day .= $day_value.",";	 
 	}
 	$day = rtrim($day, ',');
+} else {
+	$day = "";
 }
 
 
@@ -88,6 +143,8 @@ if ($months_post == "every-month") {
 		$month .= $month_value.",";	 
 	}
 	$month = rtrim($month, ',');
+} else {
+	$month = "";
 }
 
 
@@ -102,6 +159,8 @@ if ($weekdays_post == "everyday") {
 		$weekday .= $weekday_value.",";	 
 	}
 	$weekday = rtrim($weekday, ',');
+} else {
+	$weekday = "";
 }
 
 echo "<code>".$minute." ".$hour." ".$day." ".$month." ".$weekday." ".$command."</code>";
