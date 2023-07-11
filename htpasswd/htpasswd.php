@@ -21,7 +21,7 @@ function encryptMd5($username, $password) {
 	return $string;
 }
 function encryptCrypt($username, $password) {
-	$encrypted_password = crypt($password);
+	$encrypted_password = crypt($password, 'pi');
 	$string = $username.":".$encrypted_password;
 	return $string;
 }
@@ -87,20 +87,3 @@ echo "</textarea>";
 echo "</div>";
 
 echo "</div>";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
