@@ -1,6 +1,5 @@
 @charset "UTF-8";
-/* Project Settings */
-/* Box sizing rules */
+/* Project Settings */ /* Box sizing rules */
 *,
 *::before,
 *::after {
@@ -41,7 +40,8 @@ body {
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
@@ -64,10 +64,9 @@ select {
   html:focus-within {
     scroll-behavior: auto;
   }
-
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -356,6 +355,7 @@ nav.navigation .navigation_inner .nav-items ul li a img {
 #smtp .smtp,
 #color-converter .color-converter,
 #dns .dns,
+#html-entities .html-entities,
 #whois .whois,
 #ip-lookup .ip-lookup,
 #gradient .gradient,
@@ -378,27 +378,28 @@ nav.navigation .navigation_inner .nav-items ul li a img {
 }
 @media (max-width: 1024px) {
   #password-generator .password-generator,
-#idn-converter .idn-converter,
-#identity-generator .identity-generator,
-#smtp .smtp,
-#color-converter .color-converter,
-#dns .dns,
-#whois .whois,
-#ip-lookup .ip-lookup,
-#gradient .gradient,
-#fluid-typography .fluid-typography,
-#lorem-ipsum .lorem-ipsum,
-#htpasswd .htpasswd,
-#css-grid .css-grid,
-#cron .cron,
-#placeholder .placeholder,
-#pattern .pattern,
-#filter .filter,
-#morse .morse,
-#device-info .device-info,
-#ssh .ssh,
-#meta .meta,
-#portscanner .portscanner {
+  #idn-converter .idn-converter,
+  #identity-generator .identity-generator,
+  #smtp .smtp,
+  #color-converter .color-converter,
+  #dns .dns,
+  #html-entities .html-entities,
+  #whois .whois,
+  #ip-lookup .ip-lookup,
+  #gradient .gradient,
+  #fluid-typography .fluid-typography,
+  #lorem-ipsum .lorem-ipsum,
+  #htpasswd .htpasswd,
+  #css-grid .css-grid,
+  #cron .cron,
+  #placeholder .placeholder,
+  #pattern .pattern,
+  #filter .filter,
+  #morse .morse,
+  #device-info .device-info,
+  #ssh .ssh,
+  #meta .meta,
+  #portscanner .portscanner {
     background: var(--color-purple-3);
   }
 }
@@ -470,11 +471,13 @@ main.content .content_block .beta {
   width: 0.5em;
   height: 0.3em;
   background-color: var(--color-purple-1);
-  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  -webkit-clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+          clip-path: polygon(100% 0%, 0 0%, 50% 100%);
   justify-self: end;
 }
 .select select {
-  appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   -webkit-appearance: none;
   background-color: transparent;
   border: none;
@@ -1069,6 +1072,4 @@ footer#footer p a {
   opacity: 0;
   bottom: -250px;
   left: -130px;
-}
-
-/*# sourceMappingURL=app.css.map */
+}/*# sourceMappingURL=app.css.map */

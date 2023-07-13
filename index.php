@@ -30,6 +30,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						<button class="filter" data-filter="security" onclick="filterCategory(this)">Security</button>
 						<button class="filter" data-filter="design" onclick="filterCategory(this)">Design</button>
 						<button class="filter" data-filter="content" onclick="filterCategory(this)">Content</button>
+						<button class="filter" data-filter="code" onclick="filterCategory(this)">Code</button>
 						<button class="filter" data-filter="networking" onclick="filterCategory(this)">Networking</button>
 						<button class="filter" data-filter="server" onclick="filterCategory(this)">Server</button><br><br>
 					</div>
@@ -316,6 +317,18 @@ $description = "A diverse collection of webtools for design, content creation, n
 						<div class="card-body">
 							<h2>Fluid Typography</h2>
 							<p>Create text that scales with the window size, so that your headings look great on any screen.</p>
+						</div>
+					</a>
+				</div>
+
+				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="code">
+					<a href="/entity-converter" class="card">
+						<div class="card-header">
+							<img src="/assets/img/entities.svg" alt="HTML entity converter icon">
+						</div>
+						<div class="card-body">
+							<h2>HTML Entity Converter</h2>
+							<p>Encode and decode HTML entities.</p>
 						</div>
 					</a>
 				</div>

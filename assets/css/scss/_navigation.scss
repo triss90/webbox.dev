@@ -1,14 +1,14 @@
-nav.navigation { 
-	grid-area: navigation; 
+nav.navigation {
+	grid-area: navigation;
 	max-height: 100%;
 	height: calc(100% - 1.3rem);
 	margin: 0.65rem 0 0.65rem 0.65rem;
 	//overflow: hidden;
-	@media(max-width: 1024px) {
-		margin: 0.30rem 0 0.30rem 0.30rem;
+	@media (max-width: 1024px) {
+		margin: 0.3rem 0 0.3rem 0.3rem;
 	}
 	.navigation_logo {
-		font-family: 'Dancing Script', cursive;
+		font-family: "Dancing Script", cursive;
 		height: 80px;
 		background: var(--color-white-1);
 		border: 1px solid var(--color-white-3);
@@ -18,8 +18,8 @@ nav.navigation {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		@media(max-width: 1024px) {
-			margin-bottom: 0.30rem;
+		@media (max-width: 1024px) {
+			margin-bottom: 0.3rem;
 			height: 55px;
 		}
 		&:hover {
@@ -32,9 +32,10 @@ nav.navigation {
 				line-height: 1;
 				margin: 0;
 				padding: 0;
-				background-image: linear-gradient(to right,
-					var(--color-purple-1), 
-					var(--color-blue-1), 
+				background-image: linear-gradient(
+					to right,
+					var(--color-purple-1),
+					var(--color-blue-1),
 					var(--color-blue-2)
 				);
 				-webkit-background-clip: text;
@@ -43,7 +44,7 @@ nav.navigation {
 		}
 		&.desktop {
 			display: block;
-			@media(max-width: 1024px) {
+			@media (max-width: 1024px) {
 				display: none;
 			}
 			h1 {
@@ -52,13 +53,13 @@ nav.navigation {
 		}
 		&.mobile {
 			display: none;
-			@media(max-width: 1024px) {
+			@media (max-width: 1024px) {
 				display: block;
 			}
 			h1 {
 				font-size: 3rem;
 				position: relative;
-				top: -0.5rem;	
+				top: -0.5rem;
 			}
 		}
 	}
@@ -80,7 +81,7 @@ nav.navigation {
 		// 	background: red;
 		// }
 		.nav-search {
-			@media(max-width: 1024px) {
+			@media (max-width: 1024px) {
 				display: none;
 			}
 		}
@@ -89,7 +90,7 @@ nav.navigation {
 				margin: 1rem;
 				padding: 0;
 				list-style: none;
-				@media(max-width: 1024px) {
+				@media (max-width: 1024px) {
 					margin: 0.25rem;
 				}
 				li {
@@ -105,12 +106,12 @@ nav.navigation {
 							width: 1rem;
 							right: 1rem;
 							top: 1.3rem;
-							@media(max-width: 1024px) {
+							@media (max-width: 1024px) {
 								display: none;
 							}
 						}
 					}
-					@media(max-width: 1024px) {
+					@media (max-width: 1024px) {
 						margin-bottom: 0.25rem;
 					}
 					a {
@@ -121,7 +122,7 @@ nav.navigation {
 						text-decoration: none;
 						border-radius: 1rem;
 						padding: 0.5rem;
-						@media(max-width: 1024px) {
+						@media (max-width: 1024px) {
 							border-radius: 0.8rem;
 						}
 						&:hover {
@@ -134,7 +135,7 @@ nav.navigation {
 							margin-right: 0.5rem;
 						}
 						span {
-							@media(max-width: 1024px) {
+							@media (max-width: 1024px) {
 								display: none;
 							}
 						}
@@ -143,11 +144,10 @@ nav.navigation {
 			}
 		}
 		.github {
-			@media(max-width: 1024px) {
+			@media (max-width: 1024px) {
 				display: none;
 			}
 		}
-		
 	}
 }
 
@@ -157,6 +157,7 @@ nav.navigation {
 #smtp .smtp,
 #color-converter .color-converter,
 #dns .dns,
+#html-entities .html-entities,
 #whois .whois,
 #ip-lookup .ip-lookup,
 #gradient .gradient,
@@ -176,7 +177,7 @@ nav.navigation {
 	font-weight: 700;
 	color: var(--color-black-2);
 	background: var(--color-white-2);
-	@media(max-width: 1024px) {
+	@media (max-width: 1024px) {
 		background: var(--color-purple-3);
 	}
 }

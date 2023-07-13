@@ -17,6 +17,9 @@
 			<li class="item"><a href="/meta" class="meta"><img src="/assets/img/meta.svg" alt="meta data icon"> <span>Meta Data Generator</span></a></li> 
 			<li class="item"><a href="/smtp" class="smtp"><img src="/assets/img/smtp.svg" alt="SMTP test icon"> <span>SMTP Test</span></a></li>
 			<li class="item"><a href="/dns" class="dns"><img src="/assets/img/dns.svg" alt="DNS lookup icon"> <span>DNS Lookup</span></a></li>
+
+			<li class="item"><a href="/entity-converter" class="html-entities"><img src="/assets/img/entities.svg" alt="HTML entity converter icon"> <span>HTML Entity Converter</span></a></li>
+			
 			<li class="item external"><a href="https://scutum.pw" target="_blank" class="scutum"><img src="/assets/img/encryption.svg" alt="encryption icon"> <span>Text Encryption</span></a></li>
 			<li class="item external"><a href="https://compressionbear.com" target="_blank" class="compressionbear"><img src="/assets/img/optimization.svg" alt="optimization icon"> <span>Image Compression</span></a></li>
 			<li class="item"><a href="/ip-lookup" class="ip-lookup"><img src="/assets/img/ip-lookup.svg" alt="IP lookup icon"> <span>IP Lookup</span></a></li>
