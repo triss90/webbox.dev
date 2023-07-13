@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	
-	<title>Webbox <?php if($title != ""){ echo "| " . $title; }?></title>
+	<title>Webbox <?php if($title != "" ){ echo "| " . $title; }?></title>
 
 	<meta name="description" content="<?php echo $description; ?>">
 	<meta property="og:title" content="Webbox <?php if($title != ""){ echo "| " . $title; }?>">

@@ -1,4 +1,10 @@
 <link rel="stylesheet" href="/assets/css/landinpage.css">
+
+<?php
+$title = "";
+$description = "A diverse collection of webtools for design, content creation, networking and much more.";
+?>
+
 <?php include_once("_inc/header.php"); ?>
 
 
