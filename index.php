@@ -5,12 +5,12 @@ $title = "";
 $description = "A diverse collection of webtools for design, content creation, networking and much more.";
 ?>
 
-<?php include_once("_inc/header.php"); ?>
+<?php include_once "_inc/header.php";?>
 
 
 <div class="landingpage">
 	<div class="container">
-		
+
 		<header>
 			<div class="row">
 				<div class="tiny-12 center-tiny">
@@ -19,7 +19,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 				</div>
 			</div>
 		</header>
-				
+
 		<main>
 			<div class="row">
 				<div class="tiny-12">
@@ -34,7 +34,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						<button class="filter" data-filter="networking" onclick="filterCategory(this)">Networking</button>
 						<button class="filter" data-filter="server" onclick="filterCategory(this)">Server</button><br><br>
 					</div>
-					
+
 					<script>
 						function filterSearch() {
 							let title;
@@ -69,12 +69,12 @@ $description = "A diverse collection of webtools for design, content creation, n
 							}
 						}
 					</script>
-					
+
 				</div>
 			</div>
-			
+
 			<div class="row">
-				
+
 				<!-- <script src="/assets/js/native.js" type="text/javascript"></script>
 				<script>
 					// _native.init('CKYI42JJ', {
@@ -99,7 +99,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</a>
 					</div>
 				</div> -->
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="security">
 					<a href="/password-generator" class="card">
 						<div class="card-header">
@@ -111,7 +111,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="networking">
 					<a href="/idn-converter" class="card">
 						<div class="card-header">
@@ -123,7 +123,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="design">
 					<a href="https://colordrop.io" target="_blank" class="card">
 						<div class="tag">colordrop.io</div>
@@ -136,7 +136,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="content">
 					<a href="/identity-generator" class="card">
 						<div class="card-header">
@@ -148,7 +148,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="design">
 					<a href="/color-converter" class="card">
 						<div class="card-header">
@@ -160,7 +160,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="security">
 					<a href="https://leakedpassword.com" target="_blank" class="card">
 						<div class="tag">leakedpassword.com</div>
@@ -173,7 +173,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="design">
 					<a href="/gradient" class="card">
 						<div class="card-header">
@@ -185,7 +185,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="content">
 					<a href="/meta" class="card">
 						<div class="card-header">
@@ -197,7 +197,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="networking">
 					<a href="/whois" class="card">
 						<div class="card-header">
@@ -209,7 +209,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="content">
 					<a href="/lorem-ipsum" class="card">
 						<div class="card-header">
@@ -221,7 +221,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="security">
 					<a href="/ssh-key" class="card">
 						<div class="card-header">
@@ -233,7 +233,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="networking">
 					<a href="/smtp" class="card">
 						<div class="card-header">
@@ -245,7 +245,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="networking">
 					<a href="/dns" class="card">
 						<div class="card-header">
@@ -257,7 +257,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="security">
 					<a href="https://scutum.pw" target="_blank" class="card">
 						<div class="tag">scutum.pw</div>
@@ -270,7 +270,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="design">
 					<a href="https://gridder.io" target="_blank" class="card">
 						<div class="tag">gridder.io</div>
@@ -283,7 +283,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="networking">
 					<a href="/ip-lookup" class="card">
 						<div class="card-header">
@@ -295,7 +295,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="content">
 					<a href="https://yirra.net" target="_blank" class="card">
 						<div class="tag">yirra.net</div>
@@ -308,7 +308,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="design">
 					<a href="/fluid-typography" class="card">
 						<div class="card-header">
@@ -332,7 +332,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="design">
 					<a href="https://compressionbear.com" target="_blank" class="card">
 						<div class="tag">compressionbear.com</div>
@@ -345,7 +345,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="networking">
 					<a href="/port-scanner" class="card">
 						<div class="card-header">
@@ -357,7 +357,20 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
+				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="design">
+					<a href="https://darky.app" target="_blank" class="card">
+						<div class="tag">darky.app</div>
+						<div class="card-header">
+							<img src="/assets/img/darkmode.svg" alt="darkmode icon">
+						</div>
+						<div class="card-body">
+							<h2>Darky.js</h2>
+							<p>Add a dark mode to your website in seconds. No hassle, no reworking your entire codebase!</p>
+						</div>
+					</a>
+				</div>
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="content">
 					<a href="/morse" class="card">
 						<div class="card-header">
@@ -369,7 +382,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="security">
 					<a href="/htpasswd" class="card">
 						<div class="card-header">
@@ -381,7 +394,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="content">
 					<a href="https://mrkdwn.net" target="_blank" class="card">
 						<div class="tag">mrkdwn.net</div>
@@ -394,7 +407,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="design">
 					<a href="/css-grid" class="card">
 						<div class="card-header">
@@ -406,7 +419,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="server">
 					<a href="/cron" class="card">
 						<div class="card-header">
@@ -418,7 +431,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="design">
 					<a href="/placeholder" class="card">
 						<div class="card-header">
@@ -430,7 +443,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="design">
 					<a href="/pattern" class="card">
 						<div class="card-header">
@@ -442,7 +455,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="design">
 					<a href="/filter" class="card">
 						<div class="card-header">
@@ -454,7 +467,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="security">
 					<a href="/device-info" class="card">
 						<div class="card-header">
@@ -466,13 +479,13 @@ $description = "A diverse collection of webtools for design, content creation, n
 						</div>
 					</a>
 				</div>
-				
+
 			</div>
-			
-			<?php include('_inc/ad.php'); ?>
+
+			<?php include '_inc/ad.php';?>
 		</main>
-				
+
 	</div>
 </div>
 
-<?php include_once("_inc/footer.php"); ?>
+<?php include_once "_inc/footer.php";?>
