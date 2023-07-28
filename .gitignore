@@ -14,3 +14,5 @@ gen### CodeKit template
 config.codekit
 /min
 .vscode/*
+.DS_Store
+.gitignore
