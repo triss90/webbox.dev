@@ -112,6 +112,7 @@ $description = "A diverse collection of webtools for design, content creation, n
 					</a>
 				</div>
 
+
 				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="networking">
 					<a href="/idn-converter" class="card">
 						<div class="card-header">
@@ -230,6 +231,19 @@ $description = "A diverse collection of webtools for design, content creation, n
 						<div class="card-body">
 							<h2>SSH Key Generator</h2>
 							<p>Generate a keypair to be used with openSSH using the ssh-keygen function in javascript.</p>
+						</div>
+					</a>
+				</div>
+
+				<div class="item tiny-12 small-6 medium-4 large-3" data-filter-item="content">
+					<a href="https://co2.observer" target="_blank" class="card">
+						<div class="tag">co2.observer</div>
+						<div class="card-header">
+							<img src="/assets/img/co2.svg" alt="CO2 Scanner icon">
+						</div>
+						<div class="card-body">
+							<h2>CO2 Scanner</h2>
+							<p>Scan websites to gauge CO2 usage and eco-friendliness.</p>
 						</div>
 					</a>
 				</div>

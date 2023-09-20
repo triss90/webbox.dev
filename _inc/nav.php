@@ -17,9 +17,7 @@
 			<li class="item"><a href="/meta" class="meta"><img src="/assets/img/meta.svg" alt="meta data icon"> <span>Meta Data Generator</span></a></li> 
 			<li class="item"><a href="/smtp" class="smtp"><img src="/assets/img/smtp.svg" alt="SMTP test icon"> <span>SMTP Test</span></a></li>
 			<li class="item"><a href="/dns" class="dns"><img src="/assets/img/dns.svg" alt="DNS lookup icon"> <span>DNS Lookup</span></a></li>
-
 			<li class="item"><a href="/entity-converter" class="html-entities"><img src="/assets/img/entities.svg" alt="HTML entity converter icon"> <span>HTML Entity Converter</span></a></li>
-			
 			<li class="item external"><a href="https://scutum.pw" target="_blank" class="scutum"><img src="/assets/img/encryption.svg" alt="encryption icon"> <span>Text Encryption</span></a></li>
 			<li class="item external"><a href="https://compressionbear.com" target="_blank" class="compressionbear"><img src="/assets/img/optimization.svg" alt="optimization icon"> <span>Image Compression</span></a></li>
 			<li class="item"><a href="/ip-lookup" class="ip-lookup"><img src="/assets/img/ip-lookup.svg" alt="IP lookup icon"> <span>IP Lookup</span></a></li>
@@ -33,6 +31,7 @@
 			<li class="item"><a href="/css-grid" class="css-grid"><img src="/assets/img/cssgrid.svg" alt="css grid icon"> <span>CSS Grid Generator</span></a></li>
 			<li class="item"><a href="/cron" class="cron"><img src="/assets/img/schedule.svg" alt="crontab icon"> <span>Crontab Generator</span></a></li>
 			<li class="item"><a href="/placeholder" class="placeholder"><img src="/assets/img/placeholder.svg" alt="placeholder icon"> <span>Image Placeholder</span></a></li>
+			<li class="item external"><a href="https://co2.observer" target="_blank" class="co2"><img src="/assets/img/co2.svg" alt="co2.observer icon"> <span>CO2 Scanner</span></a></li>
 			<li class="item"><a href="/pattern" class="pattern"><img src="/assets/img/pattern.svg" alt="pattern icon"> <span>CSS Pattern Generator</span></a></li>
 			<li class="item"><a href="/filter" class="filter"><img src="/assets/img/filter.svg" alt="filter icon"> <span>CSS Image Filter</span></a></li>
 			<li class="item"><a href="/morse" class="morse"><img src="/assets/img/morse.svg" alt="morse icon"> <span>Morse Code Converter</span></a></li>
