@@ -128,9 +128,10 @@ nav.navigation {
 						&:hover {
 							background: var(--color-white-2);
 						}
-						img {
+						img,svg {
 							display: inline-block;
 							width: 48px;
+							height: 48px;
 							vertical-align: middle;
 							margin-right: 0.5rem;
 						}
