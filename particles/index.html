@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>ParticleFirework.js</title>
+
+    <link rel="stylesheet" href="assets/css/app.css" />
+
+    <meta name="description" content="" />
+    <meta property="og:title" content="ParticleFirework.js" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://www.mywebsite.com/image.jpg" />
+    <meta property="og:image:alt" content="Image description" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:url" content="https://www.mywebsite.com/page" />
+    <link rel="canonical" href="https://www.mywebsite.com/page" />
+
+    <link rel="icon" href="assets/img/favicon.ico" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/img/my.webmanifest" />
+    <meta name="theme-color" content="#FF00FF" />
+
+    <!-- Prism.js Core -->
+    <link id="prism-light" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
+    <link id="prism-dark" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" disabled>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+
+    <!-- Toolbar Plugin (necessary for Copy to Clipboard) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
+
+    <!-- Copy to Clipboard Plugin -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>ParticleFirework.js</h1>
+      </header>
+      <aside class="sidebar">
+        <nav>
+          <ul>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#usage">Usage</a></li>
+            <li><a href="#configuration-options">Configuration Options</a></li>
+            <li><a href="#triggering-the-particle-effect">Triggering the Particle Effect</a></li>
+            <li><a href="#advanced-usage-examples">Advanced Usage Examples</a></li>
+            <li><a href="#custom-svg-shapes">Custom SVG Shapes</a></li>
+            <li><a href="#methods">Methods</a></li>
+            <li><a href="#license">License</a></li>
+            <li><a href="#contributing">Contributing</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <main class="content">
+        <h2>ParticleFirework.js</h2>
+        <p>
+          ParticleFirework.js is a lightweight JavaScript class that enables you
+          to create customizable particle effects, perfect for adding flair to
+          your web projects. Control the duration, delay, number of particles,
+          colors, size, shape, and spread to achieve the perfect visual effect.
+        </p>
+
+        <a href="particlefirework.js" download class="button button-primary">Download</a>
+        <button id="example1" class="button button-secondary">Try ParticleFirework.js</button>
+
+        <h3 id="installation">Installation</h3>
+        <p>
+          To use ParticleFirework.js, simply include the script in your HTML
+          file or import it into your JavaScript project.
+        </p>
+
+        <h4>Via Script Tag</h4>
+        <pre><code class="language-html">&lt;script src="path/to/ParticleFirework.js"&gt;&lt;/script&gt;</code></pre>
+
+        <h4>Via Module Import</h4>
+        <pre><code class="language-javascript">import ParticleFirework from 'path/to/ParticleFirework.js';</code></pre>
+
+        <h3 id="usage">Usage</h3>
+        <p>
+          Instantiate a new <code>ParticleFirework</code> object with
+          customizable options to trigger a particle effect from the center of a
+          specified HTML element.
+        </p>
+
+        <h4>Basic Example</h4>
+        <pre><code class="language-javascript">new ParticleFirework({
+  elementId: 'myElement',
+  duration: 200,
+  delay: 500,
+  numParticles: 150,
+  colors: ['#ff6b6b', '#ff9f6b', '#ffcd6b', '#cdff6b', '#6bff9f', '#6bcfff', '#6b9fff'],
+  size: 5,
+  shape: 'circle',
+  spread: 3
+});</code></pre>
+
+        <h4>HTML Setup</h4>
+        <pre><code class="language-html">&lt;div id="myElement"&gt;&lt;/div&gt;</code></pre>
+
+        <h3 id="configuration-options">Configuration Options</h3>
+        <p>
+          When creating a new <code>ParticleFirework</code>, you can pass an
+          options object to customize the behavior and appearance of the
+          particles.
+        </p>
+
+        <h4>Options</h4>
+        <ul>
+          <li>
+            <code>elementId</code>: string, The ID of the HTML element from
+            which particles will originate.
+          </li>
+          <li>
+            <code>duration</code>: number, Default 100, The duration over which
+            particles are generated, measured in animation frames.
+          </li>
+          <li>
+            <code>delay</code>: number, Default 0, Delay before the animation
+            starts, in milliseconds.
+          </li>
+          <li>
+            <code>numParticles</code>: number, Default 100, Total number of
+            particles to create during the animation.
+          </li>
+          <li>
+            <code>colors</code>: array, Default <code>['#6bff9f']</code>, An
+            array of color strings to use for the particles. Colors will be
+            chosen randomly from this array.
+          </li>
+          <li>
+            <code>size</code>: number, Default 5, The size of each particle, in
+            pixels.
+          </li>
+          <li>
+            <code>shape</code>: string, Default 'circle', The shape of the
+            particles. Supported values are 'circle', 'square', and 'triangle'.
+          </li>
+          <li>
+            <code>spread</code>: number, Default 2, Controls the spread
+            (velocity) of particles. Higher values result in a wider spread of
+            particles.
+          </li>
+        </ul>
+
+        <h3 id="triggering-the-particle-effect">
+          Triggering the Particle Effect
+        </h3>
+        <p>
+          The <code>ParticleFirework</code> class provides a
+          <code>trigger()</code> method that allows you to manually start the
+          particle effect at any time. This method can be called on an instance
+          of <code>ParticleFirework</code>, and it will initiate the particle
+          animation based on the options you specified during instantiation.
+        </p>
+
+        <h4>Example Usage</h4>
+        <pre><code class="language-javascript">// Create an instance of ParticleFirework
+const firework = new ParticleFirework({
+  elementId: 'myElement',
+  duration: 150,
+  numParticles: 200,
+  colors: ['#ff6b6b', '#ff9f6b', '#ffcd6b', '#cdff6b', '#6bff9f', '#6bcfff', '#6b9fff'],
+  size: 5,
+  shape: 'circle',
+  spread: 3
+});
+
+// Manually trigger the firework effect
+firework.trigger();</code></pre>
+
+        <h4>Example with Delayed Triggers</h4>
+        <p>
+          You can use <code>setTimeout</code> or any other event to trigger the
+          effect multiple times, ensuring that the animations do not overlap.
+        </p>
+        <pre><code class="language-javascript">// Trigger the firework effect immediately
+firework.trigger();
+
+// Trigger the effect again after 2 seconds
+setTimeout(() => {
+  firework.trigger();
+}, 2000);</code></pre>
+
+        <h3 id="advanced-usage-examples">Advanced Usage Examples</h3>
+
+        <h4>Creating Square Particles with Wide Spread</h4>
+        <pre><code class="language-javascript">new ParticleFirework({
+  elementId: 'wideSpreadElement',
+  duration: 150,
+  numParticles: 200,
+  colors: ['#ff6b6b', '#ff9f6b', '#ffcd6b', '#cdff6b', '#6bff9f', '#6bcfff', '#6b9fff'],
+  size: 15,
+  shape: 'square',
+  spread: 8
+});</code></pre>
+
+        <h4>Delayed Start with Multiple Colors</h4>
+        <pre><code class="language-javascript">new ParticleFirework({
+  elementId: 'delayedElement',
+  duration: 250,
+  delay: 1000,
+  numParticles: 100,
+  colors: ['#ff6b6b', '#ff9f6b', '#ffcd6b', '#cdff6b', '#6bff9f', '#6bcfff', '#6b9fff'],
+  size: 8,
+  shape: 'triangle',
+  spread: 5
+});</code></pre>
+
+        <h3 id="custom-svg-shapes">Custom SVG Shapes</h3>
+        <p>You can use custom SVG shapes for your particles by specifying an inline SVG string in the <code>customShape</code> option. This gives you the flexibility to create any shape or design for your particles.</p>
+        <p>Here is how you can create a particle effect using custom SVG shapes:</p>
+
+        <pre><code class="language-javascript">// Create an instance of ParticleFirework with custom SVG shapes
+const firework = new ParticleFirework({
+  elementId: 'myElement',
+  duration: 150,
+  numParticles: 50,
+  colors: ["#ff6b6b", "#ff9f6b", "#ffcd6b"],
+  size: 30,
+  shape: "svg", // Specify the shape as 'svg'
+  customShape: `
+    &lt;path stroke=&quot;none&quot; d=&quot;M0 0h24v24H0z&quot; fill=&quot;none&quot;/&gt;&lt;path d=&quot;M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z&quot; /&gt;
+  `, // Custom SVG shape
+  spread: 3,
+});
+
+// Trigger the particle effect
+firework.trigger();</code></pre>
+
+        <button class="button button-primary" id="example3">Try it!</button>
+
+        <h3 id="methods">Methods</h3>
+        <ul>
+          <li>
+            <code>createParticle(x, y)</code>: Creates a particle at the
+            specified (x, y) coordinates. This method is used internally and is
+            typically not called directly.
+          </li>
+          <li>
+            <code>animateParticles()</code>: Handles the animation loop for the
+            particles. This method is used internally and is typically not
+            called directly.
+          </li>
+          <li>
+            <code>trigger()</code>: Manually starts the particle effect,
+            ensuring that overlapping animations are avoided.
+          </li>
+        </ul>
+
+        <h3 id="license">License</h3>
+        <p>
+          ParticleFirework.js is open-source and available under the MIT
+          License.
+        </p>
+
+        <h3 id="contributing">Contributing</h3>
+        <p>
+          Contributions are welcome! Please feel free to submit a pull request
+          or open an issue on the GitHub repository.
+        </p>
+      </main>
+      <footer class="footer">
+        <p>&copy; 2024 ParticleFirework.js. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script src="particlefirework.js"></script>
+    <script>
+      const example1 = new ParticleFirework({
+        elementId: "example1",
+        duration: 200,
+        numParticles: 150,
+        colors: ["#ff6b6b","#ff9f6b","#ffcd6b","#cdff6b","#6bff9f","#6bcfff","#6b9fff",],
+        size: 5,
+        shape: "circle",
+        spread: 3,
+      });
+      document.getElementById("example1").addEventListener("click", function () {
+        example1.trigger();
+      });
+
+      const example3 = new ParticleFirework({
+        elementId: "example3",
+        duration: 150,
+        numParticles: 50,
+        colors: ["#ff6b6b","#ff9f6b","#ffcd6b",],
+        size: 30, // Size of the SVG particle
+        shape: "svg", // Specify the shape as 'svg'
+        customShape: `
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z" />
+        `, 
+        spread: 3,
+      });
+      document.getElementById("example3").addEventListener("click", function () {
+          example3.trigger();
+        });
+    </script>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

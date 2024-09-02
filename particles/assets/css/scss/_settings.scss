@@ -1,0 +1,53 @@
+:root {
+    /* Light mode color variables */
+    --color-dark-gray: #19191a;
+    --color-light-gray-bg: #f9f9f9;
+    --color-light-gray-border: #eaeaea;
+    --color-link-blue: #0066cc;
+    --color-code-bg: #f5f5f5;
+    --color-element-bg: #ccc;
+    --color-sidebar-bg: #f4f4f4;
+    --color-almost-black: #19191a;
+    --color-white: #fff;
+
+    /* Button-related variables */
+    --btn-primary-bg: var(--color-link-blue);
+    --btn-primary-color: var(--color-white);
+    --btn-primary-hover-bg: #005bb5; /* Slightly darker blue */
+
+    --btn-secondary-bg: var(--color-sidebar-bg);
+    --btn-secondary-color: var(--color-dark-gray);
+    --btn-secondary-hover-bg: var(--color-light-gray-border);
+
+    --btn-danger-bg: #cc0000; /* Red for danger */
+    --btn-danger-color: var(--color-white);
+    --btn-danger-hover-bg: #b30000; /* Darker red */
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Dark mode color variables */
+        --color-dark-gray: #f9f9f9; /* Lighter gray for text */
+        --color-light-gray-bg: #1e1e1e; /* Dark background for content */
+        --color-light-gray-border: #444; /* Darker border */
+        --color-link-blue: #3399ff; /* Lighter blue for better contrast */
+        --color-code-bg: #2d2d2d; /* Darker background for code blocks */
+        --color-element-bg: #444; /* Slightly darker element background */
+        --color-sidebar-bg: #2a2a2a; /* Dark sidebar background */
+        --color-almost-black: #f5f5f5; /* Light text for contrast */
+        --color-white: #1e1e1e; /* Dark background */
+
+        /* Button-related variables */
+        --btn-primary-bg: var(--color-link-blue);
+        --btn-primary-color: var(--color-dark-gray); /* Light text on blue button */
+        --btn-primary-hover-bg: #2288dd; /* Slightly darker blue on hover */
+
+        --btn-secondary-bg: var(--color-sidebar-bg);
+        --btn-secondary-color: var(--color-almost-black); /* Light text on dark button */
+        --btn-secondary-hover-bg: #333; /* Darker background on hover */
+
+        --btn-danger-bg: #ff6666; /* Lighter red for danger button */
+        --btn-danger-color: var(--color-white);
+        --btn-danger-hover-bg: #e60000; /* Darker red on hover */
+    }
+}

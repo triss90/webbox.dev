@@ -1,0 +1,26 @@
+/* _scrollbars.scss */
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-light-gray-bg); /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-dark-gray); /* Color of the scrollbar thumb */
+    border-radius: 6px; /* Round edges of the scrollbar thumb */
+    border: 3px solid var(--color-light-gray-bg); /* Adds a border around the thumb to create space */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-almost-black); /* Darker color when hovering over the scrollbar */
+}
+
+/* Firefox Scrollbar */
+* {
+    scrollbar-width: thin; /* Thin scrollbar for Firefox */
+    scrollbar-color: var(--color-dark-gray) var(--color-light-gray-bg); /* Thumb and track color for Firefox */
+}

@@ -1,0 +1,36 @@
+#prism-light {
+    display: block;
+    disabled: false;
+}
+#prism-dark {
+    display: none;
+}
+
+@media (prefers-color-scheme: light) {
+    #prism-light {
+        display: block;
+        disabled: false;
+    }
+    #prism-dark {
+        display: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    #prism-light {
+        display: none;
+    }
+    #prism-dark {
+        display: block;
+        disabled: false;
+    }
+}
+
+.code-toolbar {
+    position: relative;
+    .toolbar {
+        position: absolute;
+        top: 0.75rem;
+        right: 0.75rem;
+    }
+}

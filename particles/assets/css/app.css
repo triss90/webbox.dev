@@ -1,0 +1,443 @@
+/* Project Settings */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Balance healines so titles look as they should */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+:has(:target) {
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
+}
+
+html {
+  hanging-punctuation: first last;
+  color-scheme: dark light;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+li,
+dt,
+dd,
+blockquote,
+.no-orphan {
+  text-wrap: pretty;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  :has(:target) {
+    scroll-behavior: smooth;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  /* Light mode color variables */
+  --color-dark-gray: #19191a;
+  --color-light-gray-bg: #f9f9f9;
+  --color-light-gray-border: #eaeaea;
+  --color-link-blue: #0066cc;
+  --color-code-bg: #f5f5f5;
+  --color-element-bg: #ccc;
+  --color-sidebar-bg: #f4f4f4;
+  --color-almost-black: #19191a;
+  --color-white: #fff;
+  /* Button-related variables */
+  --btn-primary-bg: var(--color-link-blue);
+  --btn-primary-color: var(--color-white);
+  --btn-primary-hover-bg: #005bb5; /* Slightly darker blue */
+  --btn-secondary-bg: var(--color-sidebar-bg);
+  --btn-secondary-color: var(--color-dark-gray);
+  --btn-secondary-hover-bg: var(--color-light-gray-border);
+  --btn-danger-bg: #cc0000; /* Red for danger */
+  --btn-danger-color: var(--color-white);
+  --btn-danger-hover-bg: #b30000; /* Darker red */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark mode color variables */
+    --color-dark-gray: #f9f9f9; /* Lighter gray for text */
+    --color-light-gray-bg: #1e1e1e; /* Dark background for content */
+    --color-light-gray-border: #444; /* Darker border */
+    --color-link-blue: #3399ff; /* Lighter blue for better contrast */
+    --color-code-bg: #2d2d2d; /* Darker background for code blocks */
+    --color-element-bg: #444; /* Slightly darker element background */
+    --color-sidebar-bg: #2a2a2a; /* Dark sidebar background */
+    --color-almost-black: #f5f5f5; /* Light text for contrast */
+    --color-white: #1e1e1e; /* Dark background */
+    /* Button-related variables */
+    --btn-primary-bg: var(--color-link-blue);
+    --btn-primary-color: var(--color-dark-gray); /* Light text on blue button */
+    --btn-primary-hover-bg: #2288dd; /* Slightly darker blue on hover */
+    --btn-secondary-bg: var(--color-sidebar-bg);
+    --btn-secondary-color: var(--color-almost-black); /* Light text on dark button */
+    --btn-secondary-hover-bg: #333; /* Darker background on hover */
+    --btn-danger-bg: #ff6666; /* Lighter red for danger button */
+    --btn-danger-color: var(--color-white);
+    --btn-danger-hover-bg: #e60000; /* Darker red on hover */
+  }
+}
+/* Typography Styles for Documentation Site */
+html {
+  font-size: 16px; /* Base font size */
+  line-height: 1.6; /* Slightly increased line-height for readability */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  color: var(--color-dark-gray); /* Base text color */
+  background-color: var(--color-light-gray-bg); /* Light background for readability */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700; /* Bold headings for clear hierarchy */
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2.25rem; /* Large size for the main title */
+}
+
+h2 {
+  font-size: 1.75rem; /* Smaller size for subheadings */
+  border-bottom: 2px solid var(--color-light-gray-border); /* Underline for separation */
+  padding-bottom: 0.25rem;
+}
+
+h3 {
+  font-size: 1.5rem; /* Third-level headings */
+  margin-top: 2.25rem;
+}
+
+h4 {
+  font-size: 1.25rem; /* Fourth-level headings */
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.125rem; /* Smaller heading */
+}
+
+h6 {
+  font-size: 1rem; /* Smallest heading */
+  font-weight: 600;
+  text-transform: uppercase; /* All caps for emphasis */
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+a {
+  color: var(--color-link-blue);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--color-link-blue); /* Dotted underline for links */
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+  color: var(--color-link-blue) !important;
+}
+
+code {
+  font-family: "Courier New", Courier, monospace;
+  background-color: var(--color-code-bg);
+  padding: 0.2em 0.4em;
+  font-size: 0.95em;
+  border-radius: 3px;
+}
+
+pre {
+  background-color: var(--color-code-bg);
+  padding: 1em;
+  overflow-x: auto;
+  border-radius: 5px;
+  font-size: 0.95em;
+  line-height: 1.45;
+  max-width: 100%;
+  white-space: pre-wrap;
+}
+
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+
+blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+  border-left: 4px solid var(--color-light-gray-border);
+  color: #555;
+  font-style: italic;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.75rem;
+  border: 1px solid var(--color-light-gray-border);
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+  font-weight: 700;
+}
+
+/* Project Styles */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: "header header" "sidebar content" "sidebar footer";
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.header {
+  grid-area: header;
+  background-color: var(--color-dark-gray);
+  color: var(--color-white);
+  padding: 1rem;
+}
+.header h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: var(--color-sidebar-bg);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+.sidebar nav ul {
+  list-style-type: none;
+}
+.sidebar nav ul li {
+  margin: 10px 0;
+}
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: var(--color-almost-black);
+}
+.sidebar nav ul li a.active {
+  color: var(--color-link-blue);
+}
+
+.content {
+  grid-area: content;
+  padding: 2rem;
+  background-color: var(--color-light-gray-bg);
+  max-width: calc(100vw - 300px - 1rem);
+}
+
+.footer {
+  grid-area: footer;
+  background-color: var(--color-almost-black);
+  color: var(--color-white);
+  padding: 1rem;
+  text-align: center;
+  padding: 3rem 0;
+  margin-block-start: 5rem;
+}
+
+/* _scrollbars.scss */
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-light-gray-bg); /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-dark-gray); /* Color of the scrollbar thumb */
+  border-radius: 6px; /* Round edges of the scrollbar thumb */
+  border: 3px solid var(--color-light-gray-bg); /* Adds a border around the thumb to create space */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-almost-black); /* Darker color when hovering over the scrollbar */
+}
+
+/* Firefox Scrollbar */
+* {
+  scrollbar-width: thin; /* Thin scrollbar for Firefox */
+  scrollbar-color: var(--color-dark-gray) var(--color-light-gray-bg); /* Thumb and track color for Firefox */
+}
+
+/* _buttons.scss */
+/* Base button styles */
+.button {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none !important;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Primary Button */
+.button-primary {
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-color);
+}
+.button-primary:hover, .button-primary:focus {
+  background-color: var(--btn-primary-hover-bg);
+  color: var(--btn-primary-color) !important;
+}
+
+/* Secondary Button */
+.button-secondary {
+  background-color: var(--btn-secondary-bg);
+  color: var(--btn-secondary-color);
+  border: 1px solid var(--color-light-gray-border);
+}
+.button-secondary:hover, .button-secondary:focus {
+  background-color: var(--btn-secondary-hover-bg);
+  color: var(--btn-secondary-color) !important;
+}
+
+/* Danger Button */
+.button-danger {
+  background-color: var(--btn-danger-bg);
+  color: var(--btn-danger-color);
+}
+.button-danger:hover, .button-danger:focus {
+  background-color: var(--btn-danger-hover-bg);
+}
+
+/* Disabled Button */
+.button:disabled {
+  background-color: var(--color-element-bg);
+  color: var(--color-light-gray-border);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+#prism-light {
+  display: block;
+  disabled: false;
+}
+
+#prism-dark {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  #prism-light {
+    display: block;
+    disabled: false;
+  }
+  #prism-dark {
+    display: none;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  #prism-light {
+    display: none;
+  }
+  #prism-dark {
+    display: block;
+    disabled: false;
+  }
+}
+.code-toolbar {
+  position: relative;
+}
+.code-toolbar .toolbar {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+}/*# sourceMappingURL=app.css.map */
